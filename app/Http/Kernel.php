@@ -63,6 +63,10 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'login' => \App\Http\Middleware\Login::class,
         'update' => \App\Http\Middleware\Update::class,
+        'kao' => \App\Http\Middleware\Kao::class,
+        'ting' => \App\Http\Middleware\Ting::class,
+        'koo' => \App\Http\Middleware\Koo::class,
+
     ];
 
     /**

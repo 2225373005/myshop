@@ -97,7 +97,7 @@ class StudentController extends Controller
         'name' => 'required',
         'age' => 'required',
     ],[  'name.required' => '用户不能为空',
-        '<age class="required"></age>' => '年龄不能为空',]);
+        'age.required' => '年龄不能为空',]);
        $data = $request->input();
        // dd($data);
        $mode =DB::table('user')->insert([

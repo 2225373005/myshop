@@ -203,6 +203,7 @@ class PayController extends Controller
      */
     public function aliReturn()
     {
+        
         header('Refresh:2;url=/index/dingdan');
         echo "<h2>订单： ".$_GET['out_trade_no'] . ' 支付成功，正在跳转</h2>';
     }
@@ -211,6 +212,7 @@ class PayController extends Controller
      */
     public function aliNotify()
     {
+        
         $data = json_encode($_POST);
         $log_str = '>>>> '.date('Y-m-d H:i:s') . $data . "<<<<\n\n";
         //记录日志
@@ -218,6 +220,7 @@ class PayController extends Controller
         //验签
         $res = $this->verify($_POST);
         $log_str = '>>>> ' . date('Y-m-d H:i:s');
+        
         if($res){
             //记录日志 验签失败
             $log_str .= " Sign Failed!<<<<< \n\n";
@@ -227,6 +230,8 @@ class PayController extends Controller
             file_put_contents(storage_path('logs/alipay.log'),$log_str,FILE_APPEND);
             //验证订单交易状态
             if($_POST['trade_status']=='TRADE_SUCCESS'){
+
+
                 
             }
         }
