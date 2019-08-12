@@ -51,6 +51,11 @@ Route::get('/index/xxoo/', 'index\IndexController@xxoo');
 
 
 //后端
+//登录
+Route::get('/admin/log/', 'admin\IndexController@log');
+
+Route::get('/admin/log_do/', 'admin\IndexController@log_do');
+
 Route::get('/admin/index/', 'admin\IndexController@index');
 Route::post('/admin/add/', 'admin\IndexController@add');
 Route::get('/admin/add_goods/', 'admin\IndexController@add_goods');
@@ -63,6 +68,46 @@ Route::group(['middleware' => ['update']], function () {
 });
 Route::get('/admin/user/', 'admin\IndexController@user');
 Route::post('/admin/shouquan/', 'admin\IndexController@shouquan');
+//微信素材添加 
+Route::get('/admin/sucai/', 'admin\SuController@sucai');
+Route::post('/admin/sucai_do/', 'admin\SuController@sucai_do');
+//素材列表
+Route::get('/admin/list/', 'admin\SuController@list');
+//获取图片的临时素材
+Route::get('/admin/tupian/', 'admin\SuController@tupian');
+Route::get('/admin/get_voice_source/', 'admin\SuController@get_voice_source');
+Route::get('/admin/tupian/', 'admin\SuController@tupian');
+
+//获取永久素材
+Route::get('/admin/sucai_yong/', 'admin\SuController@sucai_yong');
+
+
+
+
+//添加用户标签
+Route::get('/admin/biao/', 'admin\SuController@biao');
+Route::post('/admin/biao_do/', 'admin\SuController@biao_do');
+Route::get('/admin/biao_list/', 'admin\SuController@biao_list');
+Route::get('/admin/biao_update/', 'admin\SuController@biao_update');
+Route::get('/admin/biao_del/', 'admin\SuController@biao_del');
+Route::get('/admin/biao_da/', 'admin\SuController@biao_da');
+Route::post('/admin/biao_da_do/', 'admin\SuController@biao_da_do');
+//获取标签下的粉丝列表
+Route::get('/admin/biao_fei/', 'admin\SuController@biao_fei');
+Route::post('/admin/biao_fei_do/', 'admin\SuController@biao_fei_do');
+//获取用户的标签
+Route::get('/admin/yong/', 'admin\SuController@yong');
+//根据标签给用户发送消息
+Route::get('/admin/biao_song/', 'admin\SuController@biao_song');
+Route::post('/admin/biao_song_do/', 'admin\SuController@biao_song_do');
+
+
+Route::post('/admin/biao_update_do/', 'admin\SuController@biao_update_do');
+//生成代参数的二维码
+Route::get('/admin/er/', 'admin\SuController@er');
+
+//微信自动回复
+Route::get('/admin/zidong/', 'admin\SuController@zidong');
 
 
 //支付宝调用  同步
@@ -178,6 +223,24 @@ Route::group(['middleware' => ['koo']], function () {
 
 //微信接口
 Route::post('wx/notify','wx\IndexController@index');
+
+Route::get('wxx/index','wxx\IndexController@index');
+Route::get('wxx/list','wxx\IndexController@list');
+Route::get('wxx/zhanshi','wxx\IndexController@zhanshi');
+Route::get('wxx/zsxq','wxx\IndexController@zsxq');
+
+//微信登录
+Route::get('wxx/login','wxx\IndexController@login');
+Route::get('wxx/redirect','wxx\IndexController@redirect');
+Route::get('wxx/adduser','wxx\IndexController@adduser');
+
+
+Route::get('wxx/log','wxx\IndexController@log');
+//获取模板列表
+Route::get('wxx/template','wxx\IndexController@template');
+//发送模板消息
+Route::get('wxx/message','wxx\IndexController@message');
+
 
 
 

@@ -63,7 +63,14 @@
                     </dl>
                 </li>
                 <li class="layui-nav-item"><a href="">云市场</a></li>
-                <li class="layui-nav-item"><a href="">发布商品</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">微信素材</a>
+                   <dl class="layui-nav-child">
+                        <dd><a href="{{url('admin/sucai')}}">添加素材</a></dd>
+                       <dd><a href="{{url('admin/biao')}}">添加标签</a></dd>
+                       <dd><a href="{{url('admin/biao_list')}}">标签展示</a></dd>
+                    </dl>
+                </li>
             </ul>
         </div>
     </div>

@@ -6,8 +6,126 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Model\Goods;
 use DB;
+use App\Http\Controllers\tool\Wx;
+use GuzzleHttp\Client;
 class IndexController extends Controller
 {
+    public function log(){
+        return view('admin/log');
+    }
+    public function log_do(){
+        
+
+        $url ="https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=TOKEN";
+    }
+
+   //微信素材添加
+   public function sucai(){
+
+    return view('admin/sucai');
+   }
+   public function sucai_do(Wx $wx,Request $request){
+   // $data=$request->all();
+   $client = new Client();
+   if($request->hasFile('image')){
+    //图片
+    $path = $request->file('image')->store('wechat/image');
+    // dd($path);
+    $path = './storage/'.$path;
+
+    $url='https://api.weixin.qq.com/cgi-bin/media/upload?access_token='.$wx->access_token().'&type=image';
+    
+ 
+          $response = $client->request('post',$url,[
+                'multipart' => [
+                        [
+                            'name'     => 'image',
+                            'contents' => fopen(realpath($path), 'r'),
+                        ]
+                    ]
+                
+            ]);
+    $body=$response->getBody();
+    unlink($path);
+    echo $body;
+    dd();
+
+
+    
+   }elseif($request->hasFile('voice')){
+    //语音 
+    $img_file = $request->file('voice');
+    // 获取音频的后缀名/
+    $file_ext = $img_file->getClientOriginalExtension();
+    //重命名
+    $file_name=time().rand(1111,9999).'.'.'MP3';
+    // dd($file_name);
+    //保存文件
+    $file_name = $img_file->storeAs('wechat/voice',$file_name);
+    // dd($file_name);
+    //保存路径
+    $path="./storage/".$file_name;
+
+    $url='https://api.weixin.qq.com/cgi-bin/media/upload?access_token='.$wx->access_token().'&type=voice';
+
+     $response = $client->request('post',$url,[
+                'multipart' => [
+                        [
+                            'name'     => 'voice',
+                            'contents' => fopen(realpath($path), 'r'),
+                        ]
+                    ]
+                
+            ]);
+     // dd($response);
+    $body=$response->getBody();
+     unlink($path);
+    echo $body;
+    dd();
+    // dd($file_ext);
+  
+   }elseif($request->hasFile('video')){
+    //视屏
+       $img_file = $request->file('video');
+       // 获取音频的后缀名/
+       $file_ext = $img_file->getClientOriginalExtension();
+       //重命名
+       $file_name=time().rand(1111,9999).'.'.'MP4';
+//        dd($file_name);
+       //保存文件
+       $file_name = $img_file->storeAs('wechat/video',$file_name);
+//        dd($file_name);
+       //保存路径
+       $path="./storage/".$file_name;
+
+       $url='https://api.weixin.qq.com/cgi-bin/media/upload?access_token='.$wx->access_token().'&type=video';
+
+       $response = $client->request('post',$url,[
+           'multipart' => [
+               [
+                   'name'     => 'video',
+                   'contents' => fopen(realpath($path), 'r'),
+               ]
+           ]
+
+       ]);
+       // dd($response);
+       $body=$response->getBody();
+       unlink($path);
+       echo $body;
+       dd();
+   }else{
+    //缩略图
+       $path = $request->file('thumb')->store('wechat/thumb');
+
+   }
+
+   
+    
+    return view('admin/sucai');
+   }
+
+
     public function index(){
         return view('admin/index');
     }
