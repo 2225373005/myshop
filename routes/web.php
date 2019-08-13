@@ -103,11 +103,21 @@ Route::post('/admin/biao_song_do/', 'admin\SuController@biao_song_do');
 
 
 Route::post('/admin/biao_update_do/', 'admin\SuController@biao_update_do');
+
+//微信二维码页面
+Route::get('/admin/er_index/', 'admin\SuController@er_index');
+
 //生成代参数的二维码
 Route::get('/admin/er/', 'admin\SuController@er');
+//永久二微码
+Route::get('/admin/err/', 'admin\SuController@err');
+//专属二微码
+Route::get('/admin/wo/', 'admin\SuController@wo');
 
 //微信自动回复
-Route::get('/admin/zidong/', 'admin\SuController@zidong');
+Route::post('/admin/zidong/', 'admin\SuController@zidong');
+
+
 
 
 //支付宝调用  同步

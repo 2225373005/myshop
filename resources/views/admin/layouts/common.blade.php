@@ -69,6 +69,7 @@
                         <dd><a href="{{url('admin/sucai')}}">添加素材</a></dd>
                        <dd><a href="{{url('admin/biao')}}">添加标签</a></dd>
                        <dd><a href="{{url('admin/biao_list')}}">标签展示</a></dd>
+                       <dd><a href="{{url('admin/er_index')}}">二维码页面</a></dd>
                     </dl>
                 </li>
             </ul>

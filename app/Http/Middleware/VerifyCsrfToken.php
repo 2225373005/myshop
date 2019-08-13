@@ -19,6 +19,6 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        'notify_url','wx/notify',
+        'notify_url','wx/notify','admin/zidong/',
     ];
 }

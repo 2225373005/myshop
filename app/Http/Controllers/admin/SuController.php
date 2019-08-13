@@ -8,6 +8,7 @@ use App\Http\Controllers\tool\Su;
 use App\Http\Controllers\tool\Wx;
 use Illuminate\Support\Facades\Storage;
 use GuzzleHttp\Client;
+use DB;
 class SuController extends Controller
 {
 
@@ -308,15 +309,23 @@ class SuController extends Controller
 
         dd($data);
     }
+    //生成二微码页面
+    public function er_index(){
+        $data = DB::table('user')->get();
+//        dd($data);
 
+        return view('admin/er_index',['data'=>$data]);
+    }
     //生成代参数的二维码
     public function er(){
+        $id=$this->request->id;
+//        dd($id);
         $url='https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token='.$this->wx->access_token().'';
         $data=[
             'expire_seconds'=>2592000,
             'action_name'=>'QR_STR_SCENE',
             'action_info'=>['scene'=>[
-                "scene_id"=> 123,
+                "scene_id"=> $id,
             ]],
         ];
         $data=$this->wx->post($url,json_encode($data));
@@ -330,9 +339,108 @@ class SuController extends Controller
          dd();
         return view();
     }
+    //生成永久二维码
+    public function err(){
+        $id=$this->request->id;
+        $url='https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token='.$this->wx->access_token().'';
+
+        $data=[
+            'action_name'=>'QR_LIMIT_SCENE',
+            'action_info'=>['scene'=>[
+                'scene_str'=>$id,
+            ]],
+        ];
+        $data=$this->wx->post($url,json_encode($data));
+        $data=json_decode($data,1);
+//        dd($data);
+        $urll='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket='.$data['ticket'].'';
+//        dd($urll);
+        $path = 'd:/images/';
+        if(!file_exists($path))
+        {
+            if(mkdir($path,0777,true))
+            {
+                $img =$urll ;
+                ob_clean();
+                ob_start();
+                readfile($img);		//读取图片
+                $img = ob_get_contents();	//得到缓冲区中保存的图片
+                ob_end_clean();		//清空缓冲区
+                $fp = fopen($path.time().rand(1111,999).'.jpg','w');	//写入图片
+                if(fwrite($fp,$img))
+                {
+                    $aa=fclose($fp);
+                    dd($aa);
+//                    echo "图片保存成功";
+                }
+            }
+        }else{
+            $img =$urll ;
+            ob_clean();
+            ob_start();
+            readfile($img);		//读取图片
+            $img = ob_get_contents();	//得到缓冲区中保存的图片
+            ob_end_clean();		//清空缓冲区
+            $fp = fopen($path.time().rand(1111,999).'.jpg','w');	//写入图片
+//            dd($fp);
+            $path = $this->request->file()->store('wx');
+            dd($path);
+
+
+        }
+
+        $aa=DB::table('user')->where('id',$id)->update(['qrcode'=>$urll,'agent_code'=>1]);
+        if($aa){
+            return redirect('admin/er_index');
+        }
+
+        header('location:'.$url1);
+
+    }
+    //专属二维码
+    public function wo(){
+        $id=$this->request->id;
+        $data = DB::table('user')->where('id',$id)->select('qrcode')->first();
+//        dd($data);
+        echo $data->qrcode;
+    }
+
+    //自动回复
     public function zidong(){
-        echo $_GET['echostr'];
-        die();
+//        echo $_GET['echostr'];
+//        die();;
+        $data = file_get_contents("php://input");
+//        dd($data);
+        $xml = simplexml_load_string($data,'SimpleXMLElement', LIBXML_NOCDATA);
+        $xml = (array)$xml; //转化成数组
+        $log_str = date('Y-m-d H:i:s') . "\n" . $data . "\n<<<<<<<";
+        file_put_contents(storage_path('logs/wx_event.log'),$log_str,FILE_APPEND);
+//        dd($xml);
+        if($xml['MsgType']=='event'){
+
+
+        if($xml['Event']=='subscribe'){
+            $uid= explode('_',$xml['EventKey'])[1];
+                DB::table('user_wechat')->insert([
+                'uid'=>$uid,
+                'openid'=>$xml['FromUserName'],
+                'add_time'=>time()
+            ]);
+
+
+        }else{
+
+            $message = '你好!';
+            $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
+            echo $xml_str;
+         }
+        }elseif($xml['MsgType']=='text'){
+            $message = '你好!';
+            $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
+            echo $xml_str;
+        }
+//        \Log::Info(json_encode($xml));
+
     }
 
 }
