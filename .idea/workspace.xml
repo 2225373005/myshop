@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ce5ea7d-e8ba-403c-9741-25c5097c664d" name="默认的" comment="默认的">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/er_index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/common.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/common.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/er_index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/er_index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,14 +37,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="423" column="38" selection-start-line="423" selection-start-column="38" selection-end-line="423" selection-end-column="38" />
-              <folding>
-                <element signature="e#46#74#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="276">
+              <caret line="375" column="97" selection-start-line="375" selection-start-column="97" selection-end-line="375" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/admin/SuController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1077">
+              <caret line="439" selection-start-line="439" selection-end-line="439" />
             </state>
           </provider>
         </entry>
@@ -61,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/er_index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+            <state relative-caret-position="200">
+              <caret line="21" column="62" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -151,13 +154,13 @@
         <option value="$PROJECT_DIR$/resources/views/admin/biao_list.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/tool/Su.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
-        <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/admin/SuController.php" />
         <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/routes/web.php" />
         <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Middleware/VerifyCsrfToken.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layouts/common.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/er_index.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/admin/SuController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/er_index.blade.php" />
       </list>
     </option>
   </component>
@@ -258,10 +261,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="29" />
-    <option name="y" value="4" />
+    <option name="x" value="7" />
     <option name="width" value="1366" />
-    <option name="height" value="768" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="添加" />
@@ -316,24 +318,6 @@
             <path>
               <item name="myshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="myshop" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myshop" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myshop" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="wechat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myshop" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -352,7 +336,7 @@
             <path>
               <item name="myshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="myshop" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -363,7 +347,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="cassandra" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
@@ -417,18 +401,18 @@
       <workItem from="1565232120019" duration="30985000" />
       <workItem from="1565310820213" duration="20621000" />
       <workItem from="1565573470118" duration="9601000" />
-      <workItem from="1565600632139" duration="20350000" />
+      <workItem from="1565600632139" duration="28977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102798000" />
+    <option name="totallyTimeSpent" value="111425000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918166" weight="0.2193646" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.2193646" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
       <window_info id="Favorites" order="2" sideWeight="0.5008183" side_tool="true" weight="0.20726173" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -684,20 +668,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/er_index.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+        <state relative-caret-position="276">
+          <caret line="375" column="97" selection-start-line="375" selection-start-column="97" selection-end-line="375" selection-end-column="97" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/er_index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="423" column="38" selection-start-line="423" selection-start-column="38" selection-end-line="423" selection-end-column="38" />
-          <folding>
-            <element signature="e#46#74#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="200">
+          <caret line="21" column="62" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
         </state>
       </provider>
     </entry>

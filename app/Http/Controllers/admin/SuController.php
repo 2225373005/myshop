@@ -30,9 +30,9 @@ class SuController extends Controller
     }
     //获取永久素材
     public function sucai_yong(){
-       $url='https://api.weixin.qq.com/cgi-bin/material/get_material?access_token='.$this->wx->access_token().'';
+        $url='https://api.weixin.qq.com/cgi-bin/material/get_material?access_token='.$this->wx->access_token().'';
 
-       $res= $this->client->post($url, [
+        $res= $this->client->post($url, [
             'query' =>
                 [
                     'access_token'=>$this->wx->access_token(),
@@ -43,30 +43,30 @@ class SuController extends Controller
         ]);
         $body = $res->getBody();
 //        $res = json_decode($body, 1);
-       echo ($body);
+        echo ($body);
     }
 
 
     //上传素材
     public function  sucai_do(Request $request){
-      $ooxx=$request->ooxx;
-     if($request->hasFile('image')){
-         $aa=$this->su->index($ooxx,'image');
-         echo $aa;
-         dd();
-     }elseif ($request->hasFile('voice')){
-         $aa=$this->su->index($ooxx,'voice');
-         echo $aa;
-         dd();
-     }elseif ($request->hasFile('video')){
-         $aa=$this->su->index($ooxx,'video');
-         echo $aa;
-         dd();
-     }else{
-         $aa=$this->su->index($ooxx,'thumb');
-         echo $aa;
-         dd();
-     }
+        $ooxx=$request->ooxx;
+        if($request->hasFile('image')){
+            $aa=$this->su->index($ooxx,'image');
+            echo $aa;
+            dd();
+        }elseif ($request->hasFile('voice')){
+            $aa=$this->su->index($ooxx,'voice');
+            echo $aa;
+            dd();
+        }elseif ($request->hasFile('video')){
+            $aa=$this->su->index($ooxx,'video');
+            echo $aa;
+            dd();
+        }else{
+            $aa=$this->su->index($ooxx,'thumb');
+            echo $aa;
+            dd();
+        }
 //       $data=$this->request->file('image');
 //       dd($data);
     }
@@ -127,10 +127,10 @@ class SuController extends Controller
         $url='https://api.weixin.qq.com/cgi-bin/material/batchget_material?access_token='.$this->wx->access_token().'';
 //        $client=new Client;
         $aaa= [
-                'type'=>'image',
-                'offset'=>0,
-                'count'=>20,
-            ];
+            'type'=>'image',
+            'offset'=>0,
+            'count'=>20,
+        ];
         $auth=json_encode($aaa);
 //        dd($auth);
         $res = $this->wx->post($url,$auth);
@@ -155,9 +155,9 @@ class SuController extends Controller
         $info=$this->wx->post($url,json_encode($datas,JSON_UNESCAPED_UNICODE));
 //        $datas=json_encode($datas);
 //        dd($info);
-      if($info){
-          return redirect('admin/biao_list');
-      }
+        if($info){
+            return redirect('admin/biao_list');
+        }
     }
     public function biao_list(){
         $url="https://api.weixin.qq.com/cgi-bin/tags/get?access_token=".$this->wx->access_token()."";
@@ -191,14 +191,14 @@ class SuController extends Controller
 
     //删除标签
     public function biao_del(Request $request){
-         $id=$request->id;
-         $url="https://api.weixin.qq.com/cgi-bin/tags/delete?access_token=".$this->wx->access_token()."";
-         $data=[
-             "tag"=>[
-                 'id'=>$id,
-             ]
-         ];
-         $info=$this->wx->post($url,json_encode($data));
+        $id=$request->id;
+        $url="https://api.weixin.qq.com/cgi-bin/tags/delete?access_token=".$this->wx->access_token()."";
+        $data=[
+            "tag"=>[
+                'id'=>$id,
+            ]
+        ];
+        $info=$this->wx->post($url,json_encode($data));
         return redirect('admin/biao_list');
     }
 
@@ -217,29 +217,29 @@ class SuController extends Controller
         $id=$request->id;
 
 //       dd($name);
-       $url='https://api.weixin.qq.com/cgi-bin/tags/members/batchtagging?access_token='.$this->wx->access_token().'';
-       $data=[
-           'openid_list'=>$name,
-           'tagid'=>$id
-       ];
-       $data=json_encode($data);
+        $url='https://api.weixin.qq.com/cgi-bin/tags/members/batchtagging?access_token='.$this->wx->access_token().'';
+        $data=[
+            'openid_list'=>$name,
+            'tagid'=>$id
+        ];
+        $data=json_encode($data);
 //       dd($data);
-       $data= $this->wx->post($url,$data);
-       return redirect('admin/biao_list');
+        $data= $this->wx->post($url,$data);
+        return redirect('admin/biao_list');
     }
 
     //获取粉丝标签下的粉丝列表
     public function biao_fei(Request $request){
-     $id= $request->id;
-     $url='https://api.weixin.qq.com/cgi-bin/user/tag/get?access_token='.$this->wx->access_token().'';
-     $data =[
-       'tagid'=>$id,
-     ];
-   $data=$this->wx->post($url,json_encode($data));
-   $data=json_decode($data,1)['data'];
+        $id= $request->id;
+        $url='https://api.weixin.qq.com/cgi-bin/user/tag/get?access_token='.$this->wx->access_token().'';
+        $data =[
+            'tagid'=>$id,
+        ];
+        $data=$this->wx->post($url,json_encode($data));
+        $data=json_decode($data,1)['data'];
 //   dd($data);
 
-     return view('admin/biao_fei',['data'=>$data,'id'=>$id]);
+        return view('admin/biao_fei',['data'=>$data,'id'=>$id]);
     }
 
     //取消标签下的粉丝
@@ -259,25 +259,25 @@ class SuController extends Controller
 
     //获取用户的标签
     public function yong(Request $request){
-     $openid=$request->openid;
-     $url='https://api.weixin.qq.com/cgi-bin/tags/getidlist?access_token='.$this->wx->access_token().'';
-     $data=[
-         'openid'=>$openid,
-     ];
-     $data=$this->wx->post($url,json_encode($data));
-     //用户身上的标签
-     $data=json_decode($data,1)['tagid_list'];
-     $url1='https://api.weixin.qq.com/cgi-bin/tags/get?access_token='.$this->wx->access_token().'';
-     $datas=file_get_contents($url1);
-     $datas=json_decode($datas,1)['tags'];
+        $openid=$request->openid;
+        $url='https://api.weixin.qq.com/cgi-bin/tags/getidlist?access_token='.$this->wx->access_token().'';
+        $data=[
+            'openid'=>$openid,
+        ];
+        $data=$this->wx->post($url,json_encode($data));
+        //用户身上的标签
+        $data=json_decode($data,1)['tagid_list'];
+        $url1='https://api.weixin.qq.com/cgi-bin/tags/get?access_token='.$this->wx->access_token().'';
+        $datas=file_get_contents($url1);
+        $datas=json_decode($datas,1)['tags'];
 //     dd($data);
-    foreach ($data as $v){
-        foreach ($datas as $vo){
-            if($v==$vo['id']){
-               echo $vo['name'].'&nbsp';
+        foreach ($data as $v){
+            foreach ($datas as $vo){
+                if($v==$vo['id']){
+                    echo $vo['name'].'&nbsp';
+                }
             }
         }
-    }
 
 //     dd($data);
 //     return view('admin/yong',['data'=>$data]);
@@ -295,17 +295,17 @@ class SuController extends Controller
     public function  biao_song_do(Request $request){
         $datas = $request->all();
 //        dd($datas);
-       $url='https://api.weixin.qq.com/cgi-bin/message/mass/sendall?access_token='.$this->wx->access_token().'';
-       $data=[ 'filter'=>[
-           'is_to_all'=>false,
-           'tag_id'=>$datas['id'],
-       ],
-           'text'=>[
-               'content'=>$datas['name']
-           ],
-           'msgtype'=>'text',
-       ];
-       $data = $this->wx->post($url,json_encode($data,JSON_UNESCAPED_UNICODE));
+        $url='https://api.weixin.qq.com/cgi-bin/message/mass/sendall?access_token='.$this->wx->access_token().'';
+        $data=[ 'filter'=>[
+            'is_to_all'=>false,
+            'tag_id'=>$datas['id'],
+        ],
+            'text'=>[
+                'content'=>$datas['name']
+            ],
+            'msgtype'=>'text',
+        ];
+        $data = $this->wx->post($url,json_encode($data,JSON_UNESCAPED_UNICODE));
 
         dd($data);
     }
@@ -323,7 +323,7 @@ class SuController extends Controller
         $url='https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token='.$this->wx->access_token().'';
         $data=[
             'expire_seconds'=>2592000,
-            'action_name'=>'QR_STR_SCENE',
+            'action_name'=>'QR_LIMIT_STR_SCENE',
             'action_info'=>['scene'=>[
                 "scene_id"=> $id,
             ]],
@@ -336,65 +336,49 @@ class SuController extends Controller
 //        dd($url1);
 //         $info=file_get_contents($url1);
 //         echo $info;
-         dd();
+        dd();
         return view();
     }
     //生成永久二维码
     public function err(){
         $id=$this->request->id;
+//        dd($id);
         $url='https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token='.$this->wx->access_token().'';
 
         $data=[
-            'action_name'=>'QR_LIMIT_SCENE',
+            'action_name'=>'QR_LIMIT_STR_SCENE',
             'action_info'=>['scene'=>[
                 'scene_str'=>$id,
             ]],
         ];
+//        dd($data);
         $data=$this->wx->post($url,json_encode($data));
         $data=json_decode($data,1);
 //        dd($data);
         $urll='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket='.$data['ticket'].'';
 //        dd($urll);
-        $path = 'd:/images/';
-        if(!file_exists($path))
-        {
-            if(mkdir($path,0777,true))
-            {
-                $img =$urll ;
-                ob_clean();
-                ob_start();
-                readfile($img);		//读取图片
-                $img = ob_get_contents();	//得到缓冲区中保存的图片
-                ob_end_clean();		//清空缓冲区
-                $fp = fopen($path.time().rand(1111,999).'.jpg','w');	//写入图片
-                if(fwrite($fp,$img))
-                {
-                    $aa=fclose($fp);
-                    dd($aa);
-//                    echo "图片保存成功";
-                }
-            }
-        }else{
-            $img =$urll ;
-            ob_clean();
-            ob_start();
-            readfile($img);		//读取图片
-            $img = ob_get_contents();	//得到缓冲区中保存的图片
-            ob_end_clean();		//清空缓冲区
-            $fp = fopen($path.time().rand(1111,999).'.jpg','w');	//写入图片
-//            dd($fp);
-            $path = $this->request->file()->store('wx');
-            dd($path);
+        $client = new Client();
+        $response = $client->get($urll);
+//        dd($response->getBody());
+        //获取文件名
+        $h = $response->getHeaders();
+//        dd($h);
+        //echo '<pre>';print_r($h);echo '</pre>';die;
+        $ext = explode('/',$h['Content-Type'][0])[1];
+        $file_name = time().rand(1000,9999).'.'.$ext;
+        //$wx_image_path = 'wx/images/'.$file_name;
+        //保存图片
+        $path = 'wx/'.$file_name;
+        $re = Storage::disk('local')->put($path, $response->getBody());
+        $qrcode_url = env('APP_URL').'/storage/'.$path;
+        //二维码存入larvel
 
-
-        }
-
-        $aa=DB::table('user')->where('id',$id)->update(['qrcode'=>$urll,'agent_code'=>1]);
+        $aa=DB::table('user')->where('id',$id)->update(['qrcode'=>$urll,'agent_code'=>$qrcode_url]);
         if($aa){
             return redirect('admin/er_index');
         }
 
-        header('location:'.$url1);
+//        header('location:'.$url1);
 
     }
     //专属二维码
@@ -419,21 +403,30 @@ class SuController extends Controller
         if($xml['MsgType']=='event'){
 
 
-        if($xml['Event']=='subscribe'){
-            $uid= explode('_',$xml['EventKey'])[1];
-                DB::table('user_wechat')->insert([
-                'uid'=>$uid,
-                'openid'=>$xml['FromUserName'],
-                'add_time'=>time()
-            ]);
+            if($xml['Event']=='subscribe'){
+//            echo $xml;
+//            dd();
+                $uid= explode('_',$xml['EventKey'])[1];
 
 
-        }else{
+                $agent_info = DB::table('user_wechat')->where(['uid'=>$uid,'openid'=>$xml['FromUserName']])->first();
+                if(empty($agent_info)){
+                    DB::table('user_wechat')->insert([
+                        'uid'=>$uid,
+                        'openid'=>$xml['FromUserName'],
+                        'add_time'=>time()
+                    ]);
+                }
+                $message = '你好!';
+                $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
+                echo $xml_str;
 
-            $message = '你好!';
-            $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
-            echo $xml_str;
-         }
+            }else{
+
+                $message = '你好!';
+                $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
+                echo $xml_str;
+            }
         }elseif($xml['MsgType']=='text'){
             $message = '你好!';
             $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';

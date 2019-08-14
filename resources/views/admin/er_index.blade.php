@@ -19,7 +19,7 @@
         <td>{{$v->state}}</td>
         <td>
             @if($v->agent_code)
-                <img src="" alt="">已有二微码
+                <img src="{{$v->agent_code}}" alt="" width="50">
             @else
                 <a href="{{url('admin/err')}}?id={{$v->id}}">生成永久二微码</a>
             @endif
