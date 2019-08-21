@@ -117,6 +117,23 @@ Route::get('/admin/wo/', 'admin\SuController@wo');
 //微信自动回复
 Route::post('/admin/zidong/', 'admin\SuController@zidong');
 
+//微信菜单添加
+Route::get('/admin/caidan/', 'admin\SuController@caidan');
+Route::post('/admin/caidan_do/', 'admin\SuController@caidan_do');
+Route::get('/admin/diaoyong/', 'admin\SuController@diaoyong');
+//微信菜单展示列表
+Route::get('/admin/cai_list/', 'admin\SuController@cai_list');
+
+
+//微信表白
+Route::get('/admin/biao_index/', 'admin\SuController@biao_index');
+Route::post('/admin/biao_add/', 'admin\SuController@biao_add');
+Route::get('/admin/biao_wo/', 'admin\SuController@biao_wo');
+
+
+
+
+
 
 
 
@@ -250,6 +267,22 @@ Route::get('wxx/log','wxx\IndexController@log');
 Route::get('wxx/template','wxx\IndexController@template');
 //发送模板消息
 Route::get('wxx/message','wxx\IndexController@message');
+//我的表白
+Route::get('xxoo/index','admin\BiaoController@index');
+Route::post('xxoo/add','admin\BiaoController@add');
+
+//周考
+Route::get('xxxx/login','xxxx\xxoo@login');
+Route::get('xxxx/login_do','xxxx\xxoo@login_do');
+
+Route::get('xxxx/list','xxxx\xxoo@list');
+Route::get('xxxx/list_do','xxxx\xxoo@list_do');
+Route::get('xxxx/xiao','xxxx\xxoo@xiao');
+Route::post('xxxx/xiao_do','xxxx\xxoo@xiao_do');
+
+
+
+
 
 
 

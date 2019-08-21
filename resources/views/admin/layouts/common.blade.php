@@ -70,6 +70,11 @@
                        <dd><a href="{{url('admin/biao')}}">添加标签</a></dd>
                        <dd><a href="{{url('admin/biao_list')}}">标签展示</a></dd>
                        <dd><a href="{{url('admin/er_index')}}">二维码页面</a></dd>
+                       <dd><a href="{{url('admin/caidan')}}">微信菜单添加</a></dd>
+                       <dd><a href="{{url('admin/cai_list')}}">微信菜单展示</a></dd>
+                       <dd><a href="{{url('admin/biao_index')}}">表白添加菜单</a></dd>
+                       <dd><a href="{{url('admin/biao_wo')}}">表白展示列表</a></dd>
+
                     </dl>
                 </li>
             </ul>

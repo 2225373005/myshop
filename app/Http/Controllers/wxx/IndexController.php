@@ -157,7 +157,7 @@ public function message($openid,$user_info){
 
     
   	    }
-  	    // dd($info);
+//  	     dd($info);
         
      if(!empty($info)){
          $db=  DB::table('openid')->select('openid')->get()->toarray();

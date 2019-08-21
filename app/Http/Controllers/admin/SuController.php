@@ -369,8 +369,10 @@ class SuController extends Controller
         //$wx_image_path = 'wx/images/'.$file_name;
         //保存图片
         $path = 'wx/'.$file_name;
+//        dd($path);
         $re = Storage::disk('local')->put($path, $response->getBody());
         $qrcode_url = env('APP_URL').'/storage/'.$path;
+//        dd($qrcode_url);
         //二维码存入larvel
 
         $aa=DB::table('user')->where('id',$id)->update(['qrcode'=>$urll,'agent_code'=>$qrcode_url]);
@@ -435,5 +437,190 @@ class SuController extends Controller
 //        \Log::Info(json_encode($xml));
 
     }
+    //微信菜单添加
+   public function caidan(){
+        $data = DB::table('wx_cai')->where('type','event')->select('id','name')->get();
+
+
+        return view('admin/caidan',['data'=>$data]);
+   }
+    public function caidan_do(){
+        $data = $this->request->all();
+        if(empty($data['zi'])){
+           $data['zi']=0;
+        }
+        $info = DB::table('wx_cai')->where('zi',$data['zi'])->count();
+//        dd($info);
+        if($info<5){
+            $data = DB::table('wx_cai')->insert([
+                'name'=>$data['name'],
+                'type'=>$data['type'],
+                'zi'=>$data['zi'],
+                'names'=>$data['names'],
+                'url'=>$data['url'],
+            ]);
+
+            if($data){
+                $this->diaoyong();
+            }
+        }else{
+            echo "子菜单已满,请删除一条";
+        }
+
+    }
+    //刷新微信菜单
+    public  function  diaoyong(){
+        $url='https://api.weixin.qq.com/cgi-bin/menu/create?access_token='.$this->wx->access_token().'';
+
+//        dd($url);
+        $data=DB::table('wx_cai')->get()->toArray();
+//        dd($data);
+        $info=array();
+        $bbb=array();
+        foreach ($data as $v){
+//            dd($v->type);
+            if($v->zi=='0' && $v->type=='click'){
+//                dd($v);
+                    $info[]=[
+                        "type"=>"click",
+                          "name"=>$v->name,
+                          "key"=>'V1001_TODAY_MUSIC',
+                    ];
+            }elseif($v->type=='event'){
+
+//                dd($v->id);
+                $data=DB::table('wx_cai')->where('zi',$v->id)->get()->toArray();
+//                dd($data);
+
+                foreach ($data as $d){
+
+                    $aaa=[
+                           "type"=>'view',
+                           "name"=>$d->names,
+                           "url"=>$d->url,
+                   ];
+                    $bbb[]=$aaa;
+
+                }
+                $info[]=[
+                    "name"=>$v->name,
+                    "sub_button"=>$bbb,
+                    ];
+                $bbb=[];
+
+            }
+        }
+        $data =[
+            "button"=>
+                $info
+        ];
+//        dd($data);
+       $info = $this->wx->post($url,json_encode($data,JSON_UNESCAPED_UNICODE));
+      if($info){
+          return redirect('admin/cai_list');
+      }
+
+    }
+
+    public function cai_list(){
+        $data = DB::table('wx_cai')->get();
+        $info=array();
+        foreach ($data as $v){
+
+            if($v->zi==0){
+                $info[]=$v;
+                foreach ($data as $vo ) {
+                   if($v->id==$vo->zi){
+                       $info[]=$vo;
+                   }
+                }
+            }
+        }
+
+
+        return view('admin/cai_list',['info'=>$info]);
+    }
+   //微信添加表白
+    public  function biao_index(){
+        return view('admin.biao_index');
+    }
+    //微信表白添加
+    public function  biao_add(){
+//        dd(222);
+        $data = $this->request->all();
+        unset($data['_token']);
+        $info = DB::table('biao')->insert($data);
+        if($info){
+            return redirect('admin/biao_wo');
+        }
+
+    }
+
+    public  function  biao_wo(){
+        //按用户查询一级分类
+        $data= DB::table('biao')->groupBy('name')->select(['name'])->get();
+//        dd($data);
+        $xxoo=[];
+        foreach ($data as $v){
+//            dump($v);
+            //查询二级分类
+            $info = DB::table('biao')->where('name',$v->name)->get();
+//            dump($info);
+//            $xxoo=[];
+            $sub_button=[];
+            foreach ($info as $vo){
+
+                if($vo->yi==1) {
+
+                    if ($vo->type == 'click') {
+                        $xxoo['button'][] = [
+                            'type' => 'click',
+                            "name" => $vo->name,
+                            "key" => $vo->view,
+                        ];
+                    } elseif ($vo->type == 'view') {
+                        $xxoo['button'][] = [
+                            'type' => 'view',
+                            "name" => $vo->name,
+                            "url" => $vo->view,
+                        ];
+                    }
+                }
+                if($vo->yi==2){
+
+//                    dump(11);
+                    if($vo->type=='view'){
+
+                         $sub_button[]=[
+                             "type"=>"view",
+                               "name"=>$vo->names,
+                               "url"=>$vo->view,
+                         ];
+                    }elseif($vo->type=='click'){
+                        $sub_button[]=[
+                            "type"=>"click",
+                            "name"=>$vo->names,
+                            "url"=>$vo->view,
+                        ];
+                    }
+                }
+
+            }
+            if(!empty($sub_button)){
+                $xxoo['button'][] = ['name'=>$v->name,'sub_button'=>$sub_button];
+
+            }
+        }
+
+        $url =" https://api.weixin.qq.com/cgi-bin/menu/create?access_token=".$this->wx->access_token()."";
+//        dd($url);
+//        dd($xxoo);
+//dd($url);
+        $info = $this->wx->post($url,json_encode($xxoo,JSON_UNESCAPED_UNICODE));
+
+        dd($info);
+    }
+
+
 
 }
