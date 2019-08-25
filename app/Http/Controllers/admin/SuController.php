@@ -612,15 +612,96 @@ class SuController extends Controller
             }
         }
 
-        $url =" https://api.weixin.qq.com/cgi-bin/menu/create?access_token=".$this->wx->access_token()."";
+        $url ="https://api.weixin.qq.com/cgi-bin/menu/create?access_token=".$this->wx->access_token()."";
 //        dd($url);
 //        dd($xxoo);
 //dd($url);
         $info = $this->wx->post($url,json_encode($xxoo,JSON_UNESCAPED_UNICODE));
 
-        dd($info);
+//        dd($info);
+    }
+    //我的表白
+    public function biao_wode(){
+     return view('admin/biao_wode');
+    }
+    public function access_token(){
+        $url_do=asset('admin/biao_token');
+        $url='https://open.weixin.qq.com/connect/oauth2/authorize?appid='.env('APPID').'&redirect_uri='.$url_do.'&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect';
+        header('location:'.$url);
+    }
+    public function biao_token(){
+       $data = $this->request->all();
+//       $data=json_decode($data,1);
+//       dd($data);
+       $url='https://api.weixin.qq.com/sns/oauth2/access_token?appid='.env('APPID').'&secret='.env('APPSECRET').'&code='.$data['code'].'&grant_type=authorization_code';
+       $info=file_get_contents($url);
+       $info=json_decode($info,1);
+//       dd($info);
+       $url='https://api.weixin.qq.com/sns/userinfo?access_token='.$info['access_token'].'&openid='.$info['openid'].'&lang=zh_CN';
+       $data=file_get_contents($url);
+       $data=json_decode($data,1);
+
+//       dd($data);
+        $this->request->session()->put('name',$data['nickname']);
+
+        return redirect('admin/biao_woyao');
     }
 
+    //我要表白
+    public  function  biao_woyao(){
+
+      $url='https://api.weixin.qq.com/cgi-bin/user/get?access_token='.$this->wx->access_token().'';
+      $info=file_get_contents($url);
+      $info=json_decode($info,1);
+      $info=$info['data']['openid'];
+      foreach ($info as $v){
+        $aaa[]=['openid'=>$v];
+      }
+      $url='https://api.weixin.qq.com/cgi-bin/user/info/batchget?access_token='.$this->wx->access_token().'';
+//      $data=file_get_contents($url);
+
+      $where=[
+        'user_list'=>
+            $aaa,
+
+      ];
+//      dd($where);
+      $data=$this->wx->post($url,json_encode($where));
+      $data=json_decode($data,1)['user_info_list'];
+//      dd($data['user_info_list']);
+//      dd($where);
+//      dd($info);
+        return view('admin/biao_woyao',['data'=>$data,'xxoo'=>$this->request->session()->get('name')]);
+    }
+    //表白内容添加
+    public function  biao_woyao_do(){
+        $data= $this->request->all();
+        $info = DB::table('biao_bai')->insertGetId([
+            'text'=>$data['text'],
+            'name'=>$data['name'],
+            'openid'=>$data['openid'],
+        ]);
+        if($info){
+
+            $url='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$this->wx->access_token().'';
+            $data=[
+                "touser"=>$data['openid'],
+                "template_id"=>"uMyjs0sDBxYe40wqSkwl8B3IbzO6romYUJymExYh77o",
+
+                "data"=>[
+                    'first'=>[
+                        'value'=>$data['name'],
+                    ],
+                    'last'=>[
+                        'value'=>$data['text'],
+                    ]
+                ]
+            ];
+            $biao_info=$this->wx->post($url,json_encode($data));
+            dd($biao_info);
+
+        }
+    }
 
 
 }

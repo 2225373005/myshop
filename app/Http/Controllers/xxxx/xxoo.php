@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\xxxx;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Http\Controllers\tool\Wx;
 use DB;
 class xxoo extends Controller
@@ -100,6 +99,10 @@ class xxoo extends Controller
    }
    //展示列表
    public  function list_do(){
+       $app = app('wechat.official_account');
+       $user = $app->user->get('ofvtlt41O6T7AjMyUiS-B0ZbJLcI');
+       dump($user);
+
          $data = DB::table('user')->get();
          return view('xxxx/list_do',['data'=>$data]);
    }

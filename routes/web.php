@@ -129,6 +129,14 @@ Route::get('/admin/cai_list/', 'admin\SuController@cai_list');
 Route::get('/admin/biao_index/', 'admin\SuController@biao_index');
 Route::post('/admin/biao_add/', 'admin\SuController@biao_add');
 Route::get('/admin/biao_wo/', 'admin\SuController@biao_wo');
+Route::get('/admin/biao_wode/', 'admin\SuController@biao_wode');
+Route::get('/admin/biao_woyao/', 'admin\SuController@biao_woyao');
+
+Route::post('/admin/biao_woyao_do/', 'admin\SuController@biao_woyao_do');
+Route::get('/admin/biao_token/', 'admin\SuController@biao_token');
+Route::get('/admin/access_token/', 'admin\SuController@access_token');
+
+
 
 
 
@@ -267,9 +275,10 @@ Route::get('wxx/log','wxx\IndexController@log');
 Route::get('wxx/template','wxx\IndexController@template');
 //发送模板消息
 Route::get('wxx/message','wxx\IndexController@message');
-//我的表白
-Route::get('xxoo/index','admin\BiaoController@index');
-Route::post('xxoo/add','admin\BiaoController@add');
+
+////我的表白
+//Route::get('xxoo/index','admin\BiaoController@index');
+//Route::post('xxoo/add','admin\BiaoController@add');
 
 //周考
 Route::get('xxxx/login','xxxx\xxoo@login');
