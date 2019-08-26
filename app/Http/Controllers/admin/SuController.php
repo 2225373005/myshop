@@ -457,44 +457,84 @@ class SuController extends Controller
                $aaa=substr($content,0,-6);
 //               dd($aaa);
 //            dd(111);
+               $redis->incr($aaa);
                //
-               if($redis->get($aaa)>=6){
-                  if($redis->get($aaa.'油价')){
-                      $data=$redis->get($aaa.'油价');
-                      $data=json_decode($data,1);
-//                      dd('我是redis');
-//                      echo 111;
-                  }else{
-//                      dd(22);
-                      $url='http://www.wantwo.cn/tool/index';
-                      $data=file_get_contents($url);
-                      $redis->set($aaa.'油价',$data);
-                      $data=json_decode($data,1);
-                  }
+               if($redis->get($aaa.'油价')){
+//                   $redis->del($aaa.'油价');
+                   $info=$redis->get($aaa.'油价');
+//                   dd($info);
+                   $v=json_decode($info,1);
+                   $message = $v['city'].'目前油价:'."\n".'92:'.$v['92h'].'元'."\n".'95h:'.$v['95h']."\n".'98h'.$v['98h']."\n".'0h'.$v['0h'];
+
+                   $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
+//                       dd(11);
+                   echo $xml_str;
+//                   dd('我是redis');
+
 
                }else{
-//                   dd(33);
-                   //油价接口
                    $url='http://www.wantwo.cn/tool/index';
                    $data=file_get_contents($url);
                    $data=json_decode($data,1);
-//                   dd($data);
-                   $redis->incr($aaa);
-//                   dd($redis->get($aaa));
-//                   dd($data);
-               }
-               foreach ($data['result'] as$v){
 
-                   if($v['city']==$aaa){
+                   foreach ($data['result'] as$v){
+                       if($v['city']==$aaa){
+
+                           if($redis->get($aaa)>=5){
+//                               $data=$redis->get($aaa.'油价');
+                               $redis->set($aaa.'油价',json_encode($v));
+                           }
 //                       dd(11);
-                       $message = $v['city'].'目前油价:'."\n".'92:'.$v['92h']."\n".'95h:'.$v['95h']."\n".'98h'.$v['98h']."\n".'0h'.$v['0h'];
+                           $message = $v['city'].'目前油价:'."\n".'92:'.$v['92h']."\n".'95h:'.$v['95h']."\n".'98h'.$v['98h']."\n".'0h'.$v['0h'];
 
-                       $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
+                           $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
 //                       dd(11);
-                       echo $xml_str;
-
+                           echo $xml_str;
+                       }
                    }
+
                }
+
+//               if($redis->get($aaa)>=6){
+//                  if($redis->get($aaa.'油价')){
+//                      $data=$redis->get($aaa.'油价');
+//                      $data=json_decode($data,1);
+////                      dd('我是redis');
+////                      echo 111;
+//                  }else{
+////                      dd(22);
+//                      $url='http://www.wantwo.cn/tool/index';
+//                      $data=file_get_contents($url);
+//
+//                      $redis->set($aaa.'油价',$data);
+////                      $data=json_decode($data,1);
+//
+//                  }
+//
+//               }else{
+////                   dd(33);
+//                   //油价接口
+//                   $url='http://www.wantwo.cn/tool/index';
+//                   $data=file_get_contents($url);
+//                   $data=json_decode($data,1);
+//
+////                   dd($data);
+//                   $redis->incr($aaa);
+////                   dd($redis->get($aaa));
+////                   dd($data);
+//               }
+//               foreach ($data['result'] as$v){
+//
+//                   if($v['city']==$aaa){
+////                       dd(11);
+//                       $message = $v['city'].'目前油价:'."\n".'92:'.$v['92h']."\n".'95h:'.$v['95h']."\n".'98h'.$v['98h']."\n".'0h'.$v['0h'];
+//
+//                       $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
+////                       dd(11);
+//                       echo $xml_str;
+//
+//                   }
+//               }
 
 
 
