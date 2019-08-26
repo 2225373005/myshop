@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ce5ea7d-e8ba-403c-9741-25c5097c664d" name="默认的" comment="默认的">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/biao_wode.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/biao_woyao.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/myshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myshop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/xxxx/xxoo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/xxxx/xxoo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +39,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/wechat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1050">
+            <state relative-caret-position="1650">
               <caret line="62" column="38" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
             </state>
           </provider>
@@ -54,7 +48,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/xxxx/list_do.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
+            <state relative-caret-position="600">
               <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
             </state>
           </provider>
@@ -63,7 +57,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/wxx/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3450">
+            <state relative-caret-position="1500">
               <caret line="52" column="17" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="17" />
             </state>
           </provider>
@@ -90,7 +84,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
+            <state relative-caret-position="3810">
               <caret line="136" column="67" selection-start-line="136" selection-start-column="55" selection-end-line="136" selection-end-column="67" />
             </state>
           </provider>
@@ -99,7 +93,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/biao_woyao.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
+            <state relative-caret-position="1140">
               <caret line="38" column="80" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
             </state>
           </provider>
@@ -108,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="409" column="19" lean-forward="true" selection-start-line="409" selection-start-column="19" selection-end-line="409" selection-end-column="19" />
+            <state relative-caret-position="177">
+              <caret line="401" column="23" selection-start-line="401" selection-start-column="19" selection-end-line="401" selection-end-column="23" />
               <folding>
                 <element signature="e#46#74#0#PHP" expanded="true" />
                 <element signature="e#1965#2853#0#PHP" />
@@ -158,6 +152,7 @@
       <find>header</find>
       <find>insert</find>
       <find>session</find>
+      <find>biao</find>
     </findStrings>
     <dirStrings>
       <dir>C:\wnmp\www\myshop\resources\views\admin</dir>
@@ -326,8 +321,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1366" />
-    <option name="height" value="728" />
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="添加" />
@@ -344,40 +340,6 @@
             <path>
               <item name="myshop" type="b2602c69:ProjectViewProjectNode" />
               <item name="myshop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myshop" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myshop" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myshop" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myshop" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myshop" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="wxx" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="myshop" type="b2602c69:ProjectViewProjectNode" />
@@ -482,14 +444,16 @@
       <workItem from="1566180706121" duration="8731000" />
       <workItem from="1566203790052" duration="20248000" />
       <workItem from="1566353161516" duration="40083000" />
+      <workItem from="1566779071242" duration="2284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="240314000" />
+    <option name="totallyTimeSpent" value="242598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918166" weight="0.22541603" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
@@ -504,7 +468,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32786885" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.31914893" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32786885" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -517,7 +481,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/goods.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -790,21 +753,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/wechat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1050">
+        <state relative-caret-position="1650">
           <caret line="62" column="38" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/xxxx/list_do.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
+        <state relative-caret-position="600">
           <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/wxx/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3450">
+        <state relative-caret-position="1500">
           <caret line="52" column="17" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="17" />
         </state>
       </provider>
@@ -823,6 +786,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3810">
+          <caret line="136" column="67" selection-start-line="136" selection-start-column="55" selection-end-line="136" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/biao_woyao.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="38" column="80" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/biao_wode.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -830,24 +807,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/biao_woyao.blade.php">
+    <entry file="file://$USER_HOME$/Desktop/student.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="38" column="80" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="136" column="67" selection-start-line="136" selection-start-column="55" selection-end-line="136" selection-end-column="67" />
+        <state relative-caret-position="-299">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="409" column="19" lean-forward="true" selection-start-line="409" selection-start-column="19" selection-end-line="409" selection-end-column="19" />
+        <state relative-caret-position="177">
+          <caret line="401" column="23" selection-start-line="401" selection-start-column="19" selection-end-line="401" selection-end-column="23" />
           <folding>
             <element signature="e#46#74#0#PHP" expanded="true" />
             <element signature="e#1965#2853#0#PHP" />
