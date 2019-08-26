@@ -720,7 +720,7 @@ class SuController extends Controller
 
     //油价
     public function you_index(){
-        $url=env('APP_URL').'/tool/index';
+        $url='http://www.wantwo.cn/admin/you_index';
 //        dd($url);
         $data=file_get_contents($url);
         dd($data);
