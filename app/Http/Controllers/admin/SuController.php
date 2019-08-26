@@ -445,6 +445,41 @@ class SuController extends Controller
                 echo $xml_str;
             }
         }elseif($xml['MsgType']=='text'){
+           $content=$xml['Content'];
+//           dd($content);
+           $geshi='/^.*?油价$/';  //正则要验证的格式
+           if(preg_match($geshi,$content)){
+               //截取内容前两个子
+               $aaa=substr($content,0,-6);
+//               dd($aaa);
+//            dd(111);
+               //油价接口
+               $url='http://www.wantwo.cn/tool/index';
+               $data=file_get_contents($url);
+               $data=json_decode($data,1);
+//               dd($data);
+               foreach ($data['result'] as $v=>$v){
+                   if($v['city']==$aaa){
+
+                       $message = $v['city'].'目前油价:'."\n".'92:'.$v['92h']."\n".'95h:'.$v['95h']."\n".'98h'.$v['98h']."\n".'0h'.$v['0h'];
+
+                       $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
+                       echo $xml_str;
+
+                   }
+               }
+
+           }{
+                $message = '没有此城市';
+
+                $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
+                dd($xml_str);
+            }
+           dd(222);
+
+
+
+
             $message = '欢迎使用本公司提供的油价查询功能!';
             $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
             echo $xml_str;
@@ -723,7 +758,7 @@ class SuController extends Controller
         $url='http://www.wantwo.cn/tool/index';
 //        dd($url);
         $data=file_get_contents($url);
-        dd($data);
+//        dd($data);
 
 
     }
