@@ -393,6 +393,10 @@ class SuController extends Controller
 
     //自动回复
     public function zidong(){
+         //链接redis
+        $redis = new \Redis();
+        $redis->connect('127.0.0.1','6379');
+
 //        echo $_GET['echostr'];
 //        die();;
         $data = file_get_contents("php://input");
@@ -453,11 +457,32 @@ class SuController extends Controller
                $aaa=substr($content,0,-6);
 //               dd($aaa);
 //            dd(111);
-               //油价接口
-               $url='http://www.wantwo.cn/tool/index';
-               $data=file_get_contents($url);
-               $data=json_decode($data,1);
-//               dd($data);
+               //
+               if($redis->get($aaa)>=6){
+                  if($redis->get($aaa.'油价')){
+                      $data=$redis->get($aaa.'油价');
+                      $data=json_decode($data,1);
+//                      dd('我是redis');
+//                      echo 111;
+                  }else{
+//                      dd(22);
+                      $url='http://www.wantwo.cn/tool/index';
+                      $data=file_get_contents($url);
+                      $redis->set($aaa.'油价',$data);
+                      $data=json_decode($data,1);
+                  }
+
+               }else{
+//                   dd(33);
+                   //油价接口
+                   $url='http://www.wantwo.cn/tool/index';
+                   $data=file_get_contents($url);
+                   $data=json_decode($data,1);
+//                   dd($data);
+                   $redis->incr($aaa);
+//                   dd($redis->get($aaa));
+//                   dd($data);
+               }
                foreach ($data['result'] as$v){
 
                    if($v['city']==$aaa){
@@ -470,6 +495,8 @@ class SuController extends Controller
 
                    }
                }
+
+
 
            }
 //           dd(22);
