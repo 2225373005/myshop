@@ -458,31 +458,35 @@ class SuController extends Controller
                $data=file_get_contents($url);
                $data=json_decode($data,1);
 //               dd($data);
-               foreach ($data['result'] as $v=>$v){
-                   if($v['city']==$aaa){
+               foreach ($data['result'] as$v){
 
+                   if($v['city']==$aaa){
+//                       dd(11);
                        $message = $v['city'].'目前油价:'."\n".'92:'.$v['92h']."\n".'95h:'.$v['95h']."\n".'98h'.$v['98h']."\n".'0h'.$v['0h'];
 
                        $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
+//                       dd(11);
                        echo $xml_str;
 
                    }
                }
 
-           }{
+           }
+//           dd(22);
+           else{
                 $message = '没有此城市';
 
                 $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
-                dd($xml_str);
+                echo $xml_str;
             }
-           dd(222);
+//           dd(222);
 
 
 
 
-            $message = '欢迎使用本公司提供的油价查询功能!';
-            $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
-            echo $xml_str;
+//            $message = '欢迎使用本公司提供的油价查询功能!';
+//            $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
+//            echo $xml_str;
         }
 //        \Log::Info(json_encode($xml));
 
