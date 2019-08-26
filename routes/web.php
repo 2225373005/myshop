@@ -136,6 +136,13 @@ Route::post('/admin/biao_woyao_do/', 'admin\SuController@biao_woyao_do');
 Route::get('/admin/biao_token/', 'admin\SuController@biao_token');
 Route::get('/admin/access_token/', 'admin\SuController@access_token');
 
+//微信油价
+Route::get('/admin/you_index/', 'admin\SuController@you_index');
+
+Route::get('/tool/index/', 'tool\You@index');
+
+
+
 
 
 

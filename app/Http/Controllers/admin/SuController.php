@@ -438,10 +438,6 @@ class SuController extends Controller
                     echo $xml_str;
                 }
 
-
-
-
-
             }else{
 
                 $message = '你好!';
@@ -449,7 +445,7 @@ class SuController extends Controller
                 echo $xml_str;
             }
         }elseif($xml['MsgType']=='text'){
-            $message = '你好!';
+            $message = '欢迎使用本公司提供的油价查询功能!';
             $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
             echo $xml_str;
         }
@@ -721,6 +717,17 @@ class SuController extends Controller
 
         }
     }
+
+    //油价
+    public function you_index(){
+        $url=env('APP_URL').'/tool/index';
+//        dd($url);
+        $data=file_get_contents($url);
+        dd($data);
+
+
+    }
+
 
 
 }
