@@ -102,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="401" column="23" selection-start-line="401" selection-start-column="19" selection-end-line="401" selection-end-column="23" />
+            <state relative-caret-position="302">
+              <caret line="433" column="22" selection-start-line="433" selection-start-column="22" selection-end-line="435" selection-end-column="36" />
               <folding>
                 <element signature="e#46#74#0#PHP" expanded="true" />
                 <element signature="e#1965#2853#0#PHP" />
@@ -125,6 +125,15 @@
                 <element signature="e#8877#9430#0#PHP" />
                 <element signature="e#9449#9601#0#PHP" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/admin/SuController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="430" column="20" lean-forward="true" selection-start-line="430" selection-start-column="20" selection-end-line="430" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -190,7 +199,6 @@
         <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/tool/Wx.php" />
         <option value="$PROJECT_DIR$/config/filesystems.php" />
         <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/config/filesystems.php" />
-        <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/admin/SuController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/cai_list.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/caidan.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/xxoo/index.blade.php" />
@@ -210,6 +218,7 @@
         <option value="$PROJECT_DIR$/resources/views/admin/biao_wode.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/biao_woyao.blade.php" />
+        <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/admin/SuController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" />
       </list>
     </option>
@@ -444,12 +453,12 @@
       <workItem from="1566180706121" duration="8731000" />
       <workItem from="1566203790052" duration="20248000" />
       <workItem from="1566353161516" duration="40083000" />
-      <workItem from="1566779071242" duration="2284000" />
+      <workItem from="1566779071242" duration="4336000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242598000" />
+    <option name="totallyTimeSpent" value="244650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -468,7 +477,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.31914893" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3180328" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32786885" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -816,8 +825,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="401" column="23" selection-start-line="401" selection-start-column="19" selection-end-line="401" selection-end-column="23" />
+        <state relative-caret-position="302">
+          <caret line="433" column="22" selection-start-line="433" selection-start-column="22" selection-end-line="435" selection-end-column="36" />
           <folding>
             <element signature="e#46#74#0#PHP" expanded="true" />
             <element signature="e#1965#2853#0#PHP" />
