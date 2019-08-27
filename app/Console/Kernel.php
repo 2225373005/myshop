@@ -31,7 +31,7 @@ class Kernel extends ConsoleKernel
 
         $schedule->call(function () {
 
-            Log::info('222222');
+            \Log::info('222222');
             return ;
             $redis = new \Redis();
             $redis->connect('127.0.0.1','6379');
