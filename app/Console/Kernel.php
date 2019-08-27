@@ -35,7 +35,6 @@ class Kernel extends ConsoleKernel
             $redis = new \Redis();
             $redis->connect('127.0.0.1','6379');
             $url='http://www.wantwo.cn/tool/index';
-            \Log::Info('2222222');
 //        dd($url);
             $data=file_get_contents($url);
 
@@ -47,42 +46,49 @@ class Kernel extends ConsoleKernel
                 if($redis->exists($v['city'].'油价')){
                     $info = $redis->get($v['city'].'油价');
                     $info = json_decode($info,1);
+//                   dump($info);
 //                    dump($v);
+                    $ppp=0;
                     foreach ($v as $k=>$vv){
                         if($vv != $info[$k]){
-                            $xxoo = DB::table('openid')->select('openid')->get()->toArray();
-//dd($xxoo);
-                            foreach ($xxoo as $vo){
-//   dd($vo);
-                                $url='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$wx->access_token().'';
-
-                                $oooo = [
-                                    "touser"=>$vo->openid,
-                                    "template_id"=>"s-jfOJfqLa2kX7nXsS7trHmo2akdFlMESWBoFMXoRSk",
-                                    "data"=>[
-                                        "aaa"=>[
-                                            "value"=>$v['city'].'最新油价'."\n",
-                                            "color"=>"#173177"
-                                        ],
-                                        "bbb"=>[
-                                            "value"=>'92:'.$v['92h'].'元'."\n".'95h:'.$v['95h']."\n".'98h:'.$v['98h']."\n".'0h:'.$v['0h']."\n",
-                                            "color"=>"#173177"
-                                        ],
-                                        "fff"=>[
-                                            "value"=>date('Y-m-d',time())."\n",
-                                            "color"=>"#173177"
-                                        ]
-                                    ]
-
-                                ];
-//                              dd($data);
-                                $data = $wx->post($url,json_encode($oooo,JSON_UNESCAPED_UNICODE));
-//                                dd($data);
-
-                            }
+                            $ppp=1;
 
                         }
                     }
+                    if($ppp==1){
+                        $xxoo = DB::table('openid')->select('openid')->get()->toArray();
+//dump($v);
+                        foreach ($xxoo as $vo){
+//   dd($vo);
+                            $url='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$wx->access_token().'';
+
+                            $oooo = [
+                                "touser"=>$vo->openid,
+                                "template_id"=>"s-jfOJfqLa2kX7nXsS7trHmo2akdFlMESWBoFMXoRSk",
+                                "data"=>[
+                                    "aaa"=>[
+                                        "value"=>$v['city'].'最新油价'."\n",
+                                        "color"=>"#173177"
+                                    ],
+                                    "bbb"=>[
+                                        "value"=>'92:'.$v['92h'].'元'."\n".'95h:'.$v['95h']."\n".'98h:'.$v['98h']."\n".'0h:'.$v['0h']."\n",
+                                        "color"=>"#173177"
+                                    ],
+                                    "fff"=>[
+                                        "value"=>date('Y-m-d',time())."\n",
+                                        "color"=>"#173177"
+                                    ]
+                                ]
+
+                            ];
+//                              dd($data);
+                            $data = $wx->post($url,json_encode($oooo,JSON_UNESCAPED_UNICODE));
+//                              dd($data);
+//                            dump($data);
+
+                        }
+                    }
+
 
                 }
             }
