@@ -826,6 +826,7 @@ class SuController extends Controller
 
     //油价
     public function you_index(){
+        $wx = new Wx();
         $redis = new \Redis();
         $redis->connect('127.0.0.1','6379');
         $url='http://www.wantwo.cn/tool/index';
@@ -847,7 +848,7 @@ class SuController extends Controller
 //dd($xxoo);
                         foreach ($xxoo as $vo){
 //   dd($vo);
-$url='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$this->wx->access_token().'';
+$url='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$wx->access_token().'';
 
                               $oooo = [
                                   "touser"=>$vo->openid,
@@ -869,8 +870,8 @@ $url='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$th
 
                               ];
 //                              dd($data);
-                              $data = $this->wx->post($url,json_encode($oooo,JSON_UNESCAPED_UNICODE));
-                              dd($data);
+                              $data = $wx->post($url,json_encode($oooo,JSON_UNESCAPED_UNICODE));
+//                              dd($data);
 
                         }
 
