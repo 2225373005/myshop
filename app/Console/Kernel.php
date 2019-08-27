@@ -32,7 +32,8 @@ class Kernel extends ConsoleKernel
         //定义任务
 
         $schedule->call(function () {
-            $wx = new Wx;
+            $app = app('wechat.official_account');
+
             $redis = new \Redis();
             $redis->connect('127.0.0.1','6379');
             $url='http://www.wantwo.cn/tool/index';
@@ -62,9 +63,9 @@ class Kernel extends ConsoleKernel
 //dump($v);
                         foreach ($xxoo as $vo){
 //   dd($vo);
-                            $url='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$wx->access_token().'';
+//                            $url='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$wx->access_token().'';
 
-                            $oooo = [
+                            $app->template_message->send([
                                 "touser"=>$vo->openid,
                                 "template_id"=>"s-jfOJfqLa2kX7nXsS7trHmo2akdFlMESWBoFMXoRSk",
                                 "data"=>[
@@ -82,9 +83,9 @@ class Kernel extends ConsoleKernel
                                     ]
                                 ]
 
-                            ];
+                            ]);
 //                              dd($data);
-                            $data = $wx->post($url,json_encode($oooo,JSON_UNESCAPED_UNICODE));
+//                            $data = $wx->post($url,json_encode($oooo,JSON_UNESCAPED_UNICODE));
 //                              dd($data);
 //                            dump($data);
 
