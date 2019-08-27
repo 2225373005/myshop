@@ -99,7 +99,7 @@ class Kernel extends ConsoleKernel
 
                 }
             }
-        })->everyMinute();
+        })->yearly();
 
         
     }
