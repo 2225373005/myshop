@@ -35,6 +35,7 @@ class Kernel extends ConsoleKernel
             $redis = new \Redis();
             $redis->connect('127.0.0.1','6379');
             $url='http://www.wantwo.cn/tool/index';
+            \Log::info('222');
 //        dd($url);
             $data=file_get_contents($url);
 
