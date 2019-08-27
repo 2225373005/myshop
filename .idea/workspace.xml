@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ce5ea7d-e8ba-403c-9741-25c5097c664d" name="默认的" comment="默认的">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/tool/You.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/tool/You.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +40,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/wxx/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
+            <state relative-caret-position="1500">
               <caret line="52" column="17" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="17" />
             </state>
           </provider>
@@ -58,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
+            <state relative-caret-position="3900">
               <caret line="139" column="61" selection-start-line="139" selection-start-column="61" selection-end-line="139" selection-end-column="61" />
             </state>
           </provider>
@@ -67,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/biao_woyao.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
+            <state relative-caret-position="476">
               <caret line="38" column="80" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
             </state>
           </provider>
@@ -76,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="828" selection-start-line="828" selection-end-line="893" selection-end-column="9" />
+            <state relative-caret-position="356">
+              <caret line="894" column="9" lean-forward="true" selection-start-line="828" selection-start-column="7" selection-end-line="894" selection-end-column="9" />
               <folding>
                 <element signature="e#46#74#0#PHP" expanded="true" />
                 <element signature="e#1965#2853#0#PHP" />
@@ -105,8 +105,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="94" column="25" lean-forward="true" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
+            <state relative-caret-position="476">
+              <caret line="100" column="13" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
               <folding>
                 <element signature="e#31#74#0#PHP" expanded="true" />
               </folding>
@@ -117,7 +117,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/tool/Wx.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
+            <state relative-caret-position="30">
               <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
               <folding>
                 <element signature="e#45#73#0#PHP" expanded="true" />
@@ -202,9 +202,9 @@
         <option value="$PROJECT_DIR$/resources/views/admin/biao_woyao.blade.php" />
         <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/admin/SuController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/tool/You.php" />
         <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Console/Kernel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/tool/You.php" />
+        <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/tool/You.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" />
         <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
       </list>
@@ -330,7 +330,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -402,12 +401,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="cassandra" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
@@ -468,12 +468,13 @@
       <workItem from="1566180706121" duration="8731000" />
       <workItem from="1566203790052" duration="20248000" />
       <workItem from="1566353161516" duration="40083000" />
-      <workItem from="1566779071242" duration="46653000" />
+      <workItem from="1566779071242" duration="46990000" />
+      <workItem from="1566890424660" duration="1293000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286967000" />
+    <option name="totallyTimeSpent" value="288597000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -805,13 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="7" selection-start-line="4" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1184">
@@ -821,28 +815,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/wxx/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
+        <state relative-caret-position="1500">
           <caret line="52" column="17" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="7" selection-start-line="4" selection-end-line="4" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
+        <state relative-caret-position="3900">
           <caret line="139" column="61" selection-start-line="139" selection-start-column="61" selection-end-line="139" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/tool/You.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="11" column="169" selection-start-line="11" selection-start-column="169" selection-end-line="11" selection-end-column="169" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/tool/Wx.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
+        <state relative-caret-position="30">
           <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding>
             <element signature="e#45#73#0#PHP" expanded="true" />
@@ -850,17 +844,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/biao_woyao.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/tool/You.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="38" column="80" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
+        <state relative-caret-position="146">
+          <caret line="9" selection-start-line="9" selection-end-line="15" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="828" selection-start-line="828" selection-end-line="893" selection-end-column="9" />
+        <state relative-caret-position="356">
+          <caret line="894" column="9" lean-forward="true" selection-start-line="828" selection-start-column="7" selection-end-line="894" selection-end-column="9" />
           <folding>
             <element signature="e#46#74#0#PHP" expanded="true" />
             <element signature="e#1965#2853#0#PHP" />
@@ -884,10 +878,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/biao_woyao.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="38" column="80" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="94" column="25" lean-forward="true" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
+        <state relative-caret-position="476">
+          <caret line="100" column="13" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
           <folding>
             <element signature="e#31#74#0#PHP" expanded="true" />
           </folding>

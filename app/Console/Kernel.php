@@ -58,6 +58,7 @@ class Kernel extends ConsoleKernel
 
                         }
                     }
+//                dd($ppp);
                     if($ppp==1){
                         $xxoo = $app->user->list($nextOpenId = null);
 //                    dd($xxoo);

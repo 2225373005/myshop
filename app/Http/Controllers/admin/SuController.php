@@ -852,6 +852,7 @@ class SuController extends Controller
 
                     }
                 }
+//                dd($ppp);
                 if($ppp==1){
                     $xxoo = $app->user->list($nextOpenId = null);
 //                    dd($xxoo);
