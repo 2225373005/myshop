@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ce5ea7d-e8ba-403c-9741-25c5097c664d" name="默认的" comment="默认的" />
+    <list default="true" id="5ce5ea7d-e8ba-403c-9741-25c5097c664d" name="默认的" comment="默认的">
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
+            <state relative-caret-position="18838">
               <caret line="827" column="32" lean-forward="true" selection-start-line="827" selection-start-column="32" selection-end-line="827" selection-end-column="32" />
               <folding>
                 <element signature="e#46#74#0#PHP" expanded="true" />
@@ -98,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-330">
-              <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+            <state relative-caret-position="270">
+              <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
               <folding>
                 <element signature="e#31#74#0#PHP" expanded="true" />
               </folding>
@@ -110,10 +112,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="true" current-in-tab="true">
+      <file pinned="true" current-in-tab="false">
         <entry file="remoteDeploymentFS://&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Console/Kernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1440" />
+            <state relative-caret-position="180">
+              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -480,12 +484,12 @@
       <workItem from="1566180706121" duration="8731000" />
       <workItem from="1566203790052" duration="20248000" />
       <workItem from="1566353161516" duration="40083000" />
-      <workItem from="1566779071242" duration="41352000" />
+      <workItem from="1566779071242" duration="42008000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281666000" />
+    <option name="totallyTimeSpent" value="282322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -871,7 +875,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
+        <state relative-caret-position="18838">
           <caret line="827" column="32" lean-forward="true" selection-start-line="827" selection-start-column="32" selection-end-line="827" selection-end-column="32" />
           <folding>
             <element signature="e#46#74#0#PHP" expanded="true" />
@@ -898,8 +902,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
-          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+        <state relative-caret-position="270">
+          <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
           <folding>
             <element signature="e#31#74#0#PHP" expanded="true" />
           </folding>
