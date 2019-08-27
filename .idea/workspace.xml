@@ -100,23 +100,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/tool/You.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="150">
+              <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
               <folding>
-                <element signature="e#45#73#0#PHP" expanded="true" />
+                <element signature="e#31#74#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="true" current-in-tab="true">
-        <entry file="remoteDeploymentFS://&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Console/Kernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -205,10 +196,10 @@
         <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/admin/SuController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/tool/You.php" />
-        <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/tool/You.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" />
-        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
         <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Console/Kernel.php" />
+        <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/tool/You.php" />
+        <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
       </list>
     </option>
   </component>
@@ -469,18 +460,18 @@
       <workItem from="1566180706121" duration="8731000" />
       <workItem from="1566203790052" duration="20248000" />
       <workItem from="1566353161516" duration="40083000" />
-      <workItem from="1566779071242" duration="33377000" />
+      <workItem from="1566779071242" duration="33516000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="273691000" />
+    <option name="totallyTimeSpent" value="273830000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918166" weight="0.22541603" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.22541603" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
       <window_info id="Favorites" order="2" sideWeight="0.5008183" side_tool="true" weight="0.20726173" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -851,6 +842,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1184">
+          <caret line="168" column="23" selection-start-line="168" selection-start-column="23" selection-end-line="168" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-120">
@@ -878,17 +876,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1184">
-          <caret line="168" column="23" selection-start-line="168" selection-start-column="23" selection-end-line="168" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="33" column="33" lean-forward="true" selection-start-line="32" selection-end-line="33" selection-end-column="33" />
+        <state relative-caret-position="150">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
           <folding>
             <element signature="e#31#74#0#PHP" expanded="true" />
           </folding>

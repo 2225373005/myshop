@@ -30,9 +30,10 @@ class Kernel extends ConsoleKernel
         //定义任务
 
         $schedule->call(function () {
-
-            \Log::info('222222');
-            return ;
+//
+//            \Log::info('222222');
+//            return ;
+            $wx = new wx();
             $redis = new \Redis();
             $redis->connect('127.0.0.1','6379');
             $url='http://www.wantwo.cn/tool/index';
