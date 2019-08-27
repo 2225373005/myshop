@@ -9,11 +9,7 @@ use DB;
 
 class Kernel extends ConsoleKernel
 {
-    public $wx;
-    public function __construct(Wx $wx)
-    {
-        $this->wx=$wx;
-    }
+
     /**
      * The Artisan commands provided by your application.
      *
@@ -36,7 +32,7 @@ class Kernel extends ConsoleKernel
         //定义任务
 
         $schedule->call(function () {
-//            $wx = new Wx;
+            $wx = new Wx;
             $redis = new \Redis();
             $redis->connect('127.0.0.1','6379');
             $url='http://www.wantwo.cn/tool/index';
@@ -66,7 +62,7 @@ class Kernel extends ConsoleKernel
 //dump($v);
                         foreach ($xxoo as $vo){
 //   dd($vo);
-                            $url='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$this->wx->access_token().'';
+                            $url='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$wx->access_token().'';
 
                             $oooo = [
                                 "touser"=>$vo->openid,
@@ -88,7 +84,7 @@ class Kernel extends ConsoleKernel
 
                             ];
 //                              dd($data);
-                            $data = $this->wx->post($url,json_encode($oooo,JSON_UNESCAPED_UNICODE));
+                            $data = $wx->post($url,json_encode($oooo,JSON_UNESCAPED_UNICODE));
 //                              dd($data);
 //                            dump($data);
 
