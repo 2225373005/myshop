@@ -464,7 +464,7 @@ class SuController extends Controller
                    $info=$redis->get($aaa.'油价');
 //                   dd($info);
                    $v=json_decode($info,1);
-                   $message = $v['city'].'目前油价:'."\n".'92:'.$v['92h'].'元'."\n".'95h:'.$v['95h']."\n".'98h'.$v['98h']."\n".'0h'.$v['0h'];
+                   $message = $v['city'].'目前油价:'."\n".'92:'.$v['92h'].'元'."\n".'95h:'.$v['95h']."\n".'98h:'.$v['98h']."\n".'0h:'.$v['0h'];
 
                    $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
 //                       dd(11);
@@ -485,7 +485,7 @@ class SuController extends Controller
                                $redis->set($aaa.'油价',json_encode($v));
                            }
 //                       dd(11);
-                           $message = $v['city'].'目前油价:'."\n".'92:'.$v['92h']."\n".'95h:'.$v['95h']."\n".'98h'.$v['98h']."\n".'0h'.$v['0h'];
+                           $message = $v['city'].'目前油价:'."\n".'92:'.$v['92h']."\n".'95h:'.$v['95h']."\n".'98h:'.$v['98h']."\n".'0h:'.$v['0h'];
 
                            $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
 //                       dd(11);
@@ -826,9 +826,59 @@ class SuController extends Controller
 
     //油价
     public function you_index(){
+        $redis = new \Redis();
+        $redis->connect('127.0.0.1','6379');
         $url='http://www.wantwo.cn/tool/index';
 //        dd($url);
         $data=file_get_contents($url);
+
+//         dd($data);
+        $data = json_decode($data,1)['result'];
+//        dd($data);
+        foreach ($data as $v){
+//             dump($v);
+            if($redis->exists($v['city'].'油价')){
+                $info = $redis->get($v['city'].'油价');
+                $info = json_decode($info,1);
+//                    dump($v);
+                foreach ($v as $k=>$vv){
+                    if($vv != $info[$k]){
+                        $xxoo = DB::table('openid')->select('openid')->get()->toArray();
+//dd($xxoo);
+                        foreach ($xxoo as $vo){
+//   dd($vo);
+$url='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$this->wx->access_token().'';
+
+                              $oooo = [
+                                  "touser"=>$vo->openid,
+                                  "template_id"=>"s-jfOJfqLa2kX7nXsS7trHmo2akdFlMESWBoFMXoRSk",
+                                  "data"=>[
+                                      "aaa"=>[
+                                                "value"=>$v['city'].'最新油价'."\n",
+                                       "color"=>"#173177"
+                                   ],
+                                   "bbb"=>[
+                                                "value"=>'92:'.$v['92h'].'元'."\n".'95h:'.$v['95h']."\n".'98h:'.$v['98h']."\n".'0h:'.$v['0h']."\n",
+                                       "color"=>"#173177"
+                                   ],
+                                      "fff"=>[
+                                "value"=>date('Y-m-d',time())."\n",
+                                "color"=>"#173177"
+                            ]
+                                  ]
+
+                              ];
+//                              dd($data);
+                              $data = $this->wx->post($url,json_encode($oooo,JSON_UNESCAPED_UNICODE));
+                              dd($data);
+
+                        }
+
+                    }
+                }
+
+            }
+        }
 //        dd($data);
 
 
