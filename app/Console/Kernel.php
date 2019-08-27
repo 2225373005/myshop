@@ -59,14 +59,17 @@ class Kernel extends ConsoleKernel
                         }
                     }
                     if($ppp==1){
-                        $xxoo = DB::table('openid')->select('openid')->get()->toArray();
+                        $xxoo = $app->user->list($nextOpenId = null);
+//                    dd($xxoo);
+                        $xxoo = $xxoo['data']['openid'];
+//                    dd($xxoo);
 //dump($v);
                         foreach ($xxoo as $vo){
 //   dd($vo);
 //                            $url='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$wx->access_token().'';
 
                             $app->template_message->send([
-                                "touser"=>$vo->openid,
+                                "touser"=>$vo,
                                 "template_id"=>"s-jfOJfqLa2kX7nXsS7trHmo2akdFlMESWBoFMXoRSk",
                                 "data"=>[
                                     "aaa"=>[
