@@ -74,7 +74,8 @@ class Kernel extends ConsoleKernel
                                 ];
 //                              dd($data);
                                 $data = $wx->post($url,json_encode($oooo,JSON_UNESCAPED_UNICODE));
-//                                dd($data);
+
+                                dd($data);
 
                             }
 
