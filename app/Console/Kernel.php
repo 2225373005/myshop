@@ -51,7 +51,7 @@ class Kernel extends ConsoleKernel
 //dd($xxoo);
                             foreach ($xxoo as $vo){
 //   dd($vo);
-                                $url='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$this->wx->access_token().'';
+                                $url='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$wx->access_token().'';
 
                                 $oooo = [
                                     "touser"=>$vo->openid,
@@ -73,7 +73,7 @@ class Kernel extends ConsoleKernel
 
                                 ];
 //                              dd($data);
-                                $data = $this->wx->post($url,json_encode($oooo,JSON_UNESCAPED_UNICODE));
+                                $data = $wx->post($url,json_encode($oooo,JSON_UNESCAPED_UNICODE));
 //                                dd($data);
 
                             }
