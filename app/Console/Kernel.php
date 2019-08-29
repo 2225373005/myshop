@@ -46,7 +46,7 @@ class Kernel extends ConsoleKernel
                     'template_id' => 'yqub99MNVhC3jt67TWxCM123GMQpqAnIRDhLiZ8kpto',
 
                     'data' => [
-                        'first' =>$user->nickname,
+                        'first' =>$user->nickname."\n",
                         'remark' => '第一节'.$data->class1."\n".'第2节'.$data->class2."\n".'第3节'.$data->class3."\n".'第4节'.$data->class4,
 
         ],
