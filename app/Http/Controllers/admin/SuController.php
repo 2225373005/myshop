@@ -430,24 +430,24 @@ class SuController extends Controller
 //                          'num'=>0,
 //                    ]);
 //                }
-
-                $app = app('wechat.official_account');
-                $user = $app->user->get('ofvtlt41O6T7AjMyUiS-B0ZbJLcI');
-
-                $info=DB::table('openid')->where('openid',$user['openid'])->first();
-                if(!empty($info)){
-
-                    DB::table('openid')->insert([
-                        'openid'=>$user['openid'],
-                        'add_time'=>time(),
-                        'subscribe'=>$user['subscribe'],
-                        'headimgurl'=>$user['headimgurl'],
-                        'sex'=>$user['sex'],
-                        'nickname'=>$user['nickname'],
-                        'city'=>$user['city'],
-                        'num'=>0,
-                    ]);
-                }
+//
+//                $app = app('wechat.official_account');
+//                $user = $app->user->get('ofvtlt41O6T7AjMyUiS-B0ZbJLcI');
+//
+//                $info=DB::table('openid')->where('openid',$user['openid'])->first();
+//                if(!empty($info)){
+//
+//                    DB::table('openid')->insert([
+//                        'openid'=>$user['openid'],
+//                        'add_time'=>time(),
+//                        'subscribe'=>$user['subscribe'],
+//                        'headimgurl'=>$user['headimgurl'],
+//                        'sex'=>$user['sex'],
+//                        'nickname'=>$user['nickname'],
+//                        'city'=>$user['city'],
+//                        'num'=>0,
+//                    ]);
+//                }
 
 
 
@@ -462,7 +462,7 @@ class SuController extends Controller
 //                    ]);
 //                }
 
-                $message = '你好!'.$user['nickname'];
+                $message = '你好!';
                 $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
                 echo $xml_str;
 
@@ -479,14 +479,14 @@ class SuController extends Controller
 //                    $message = '';
                     $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
                     echo $xml_str;
-                }
-
-            }elseif($xml['EventKey']=='kecheng'){
-                $data =DB::table('class')->where('openid',$xml['FromUserName'])->first();
-                if(empty($data)){
+                }elseif($xml['EventKey']=='kecheng'){
+//                $data =DB::table('class')->where('openid',$xml['FromUserName'])->first();
+//                if(empty($data)){
                     $message='没有选修课程,请选修课程';
                     $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
                     echo $xml_str;
+//                }
+
                 }
 
             }else{
