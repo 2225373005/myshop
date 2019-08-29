@@ -62,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="1055" column="61" selection-start-line="1055" selection-start-column="61" selection-end-line="1055" selection-end-column="61" />
+            <state relative-caret-position="-600">
+              <caret line="413" column="19" lean-forward="true" selection-start-line="413" selection-start-column="19" selection-end-line="413" selection-end-column="19" />
               <folding>
                 <element signature="e#46#74#0#PHP" expanded="true" />
                 <element signature="e#1965#2853#0#PHP" />
@@ -87,15 +87,6 @@
                 <element signature="e#8877#9430#0#PHP" />
                 <element signature="e#9449#9601#0#PHP" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="true" current-in-tab="true">
-        <entry file="remoteDeploymentFS://&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/admin/SuController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="445" lean-forward="true" selection-start-line="445" selection-end-line="445" />
             </state>
           </provider>
         </entry>
@@ -190,8 +181,8 @@
         <option value="$PROJECT_DIR$/resources/views/admin/class.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/class_list.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" />
         <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/admin/SuController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" />
       </list>
     </option>
   </component>
@@ -447,12 +438,12 @@
       <workItem from="1566353161516" duration="40083000" />
       <workItem from="1566779071242" duration="46990000" />
       <workItem from="1566890424660" duration="12811000" />
-      <workItem from="1567038304084" duration="6572000" />
+      <workItem from="1567038304084" duration="7426000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="306687000" />
+    <option name="totallyTimeSpent" value="307541000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -846,8 +837,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="1055" column="61" selection-start-line="1055" selection-start-column="61" selection-end-line="1055" selection-end-column="61" />
+        <state relative-caret-position="-600">
+          <caret line="413" column="19" lean-forward="true" selection-start-line="413" selection-start-column="19" selection-end-line="413" selection-end-column="19" />
           <folding>
             <element signature="e#46#74#0#PHP" expanded="true" />
             <element signature="e#1965#2853#0#PHP" />
