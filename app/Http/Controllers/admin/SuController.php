@@ -416,20 +416,20 @@ class SuController extends Controller
 //                $uid= explode('_',$xml['EventKey'])[1];
                 $app = app('wechat.official_account');
                 $user = $app->user->get($xml['FromUserName']);
-                $info=DB::table('openid')->where('openid',$user['FromUserName'])->first();
-                if(empty($info)){
-
-                      DB::table('openid')->insert([
-                        'openid'=>$user['openid'],
-                        'add_time'=>time(),
-                        'subscribe'=>$user['subscribe'],
-                        'headimgurl'=>$user['headimgurl'],
-                          'sex'=>$user['sex'],
-                          'nickname'=>$user['nickname'],
-                          'city'=>$user['city'],
-                          'num'=>0,
-                    ]);
-                }
+//                $info=DB::table('openid')->where('openid',$user['FromUserName'])->first();
+//                if(empty($info)){
+//
+//                      DB::table('openid')->insert([
+//                        'openid'=>$user['openid'],
+//                        'add_time'=>time(),
+//                        'subscribe'=>$user['subscribe'],
+//                        'headimgurl'=>$user['headimgurl'],
+//                          'sex'=>$user['sex'],
+//                          'nickname'=>$user['nickname'],
+//                          'city'=>$user['city'],
+//                          'num'=>0,
+//                    ]);
+//                }
 
 
 
