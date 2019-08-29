@@ -433,7 +433,7 @@ class SuController extends Controller
 //
                 $app = app('wechat.official_account');
                 $user = $app->user->get('ofvtlt41O6T7AjMyUiS-B0ZbJLcI');
-
+                dd($user);
                 $info=DB::table('openid')->where('openid',$user['openid'])->first();
 //                $lll=json_decode($info,1);
 //                dd($user);
@@ -1071,7 +1071,14 @@ class SuController extends Controller
             dd('不能修改');
         }else{
           unset($data['_token']);
-          $info = DB::table('class')->where('openid',$data['openid'])->update($data);
+          $info = DB::table('class')->where('openid',$data['openid'])->update([
+              'class1'=>$data['class1'],
+              'class1'=>$data['class2'],
+              'class1'=>$data['class3'],
+              'class1'=>$data['class4'],
+              'class1'=>$data['openid'],
+              'class1'=>$data['num'],
+          ]);
           if($info){
               dd('修改完成');
           }
