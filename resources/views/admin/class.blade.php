@@ -10,6 +10,7 @@
 <body>
 <form action="{{url('admin/class_add')}}" method="post">
     @csrf
+    <input type="hidden" name="openid" value="{{$openid}}">
     <table border="4" align="center">
         <tr>
             <td>课程1</td>

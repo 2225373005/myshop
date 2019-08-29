@@ -481,6 +481,14 @@ class SuController extends Controller
                     echo $xml_str;
                 }
 
+            }elseif($xml['EventKey']=='kecheng'){
+                $data =DB::table('class')->where('openid',$xml['FromUserName'])->first();
+                if(empty($data)){
+                    $message='没有选修课程,请选修课程';
+                    $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
+                    echo $xml_str;
+                }
+
             }else{
 
                 $message = '你好!';
@@ -1030,20 +1038,59 @@ class SuController extends Controller
 
 
     public function class(){
-       return view('admin/class');
+     $openid = $this->request->session()->get('openid');
+       return view('admin/class',['openid'=>$openid]);
+    }
+
+    public function class_updete(){
+        $openid = $this->request->session()->get('openid');
+        $data = DB::table('class')->where('openid',$openid)->first();
+        return view('admin/class_updete',['data'=>$data]);
+
+    }
+    public function class_update_do(){
+        $data= $this->request->all();
+        $data['num']+=1;
+//        $time =mktime('2019-09-01');
+
+        if($data['num']>=3 ){
+            dd('不能修改');
+        }else{
+          unset($data['_token']);
+          $info = DB::table('class')->where('openid',$data['openid'])->update($data);
+          if($info){
+              dd('修改完成');
+          }
+        }
+//       dd($data);
+
     }
     public function class_add(){
         $data=$this->request->all();
         unset($data['_token']);
         $info=DB::table('class')->insert($data);
-        if($info){
-            return redirect('admin/class_list');
-        }
+
+//        if($info){
+//            return redirect('admin/class_list');
+//        }
     }
     public  function class_list(){
         $data = $this->request->all();
-        dd($data);
-        return view('/admin/class_list');
+        $url='https://api.weixin.qq.com/sns/oauth2/access_token?appid='.env('APPID').'&secret='.env('APPSECRET').'&code='.$data['code'].'&grant_type=authorization_code';
+        $info=file_get_contents($url);
+        $info=json_decode($info,1);
+        $this->request->session()->put('openid',$info['openid']);
+//        dd($info['openid']);
+        $xxoo = DB::table('class')->where('openid',$info['openid'])->first();
+//        dd($xxoo);
+        if($xxoo){
+            return redirect('admin/class_updete');
+        }else{
+            return redirect('admin/class');
+        }
+
+
+//        return view('/admin/class_list');
     }
 
     public function class_caidan(){
@@ -1059,7 +1106,7 @@ class SuController extends Controller
                 [
                     "type"=>"view",
                     "name"=>"查看课程",
-                    "url"=>env('APP_URL').'/admin/accesss_token',
+                    "url"=>'http://www.wantwo.cn/admin/accesss_token',
                 ],
         ],
     ];
