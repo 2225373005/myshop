@@ -33,20 +33,25 @@ class Kernel extends ConsoleKernel
 
         $schedule->call(function () {
             $app = app('wechat.official_account');
-            $data=$app->user->list($nextOpenId = null);
-            $data=$data['data']['openid'];
-            foreach ($data as $v){
+//            $data=$app->user->list($nextOpenId = null);
+//            $data=$data['data']['openid'];
+//            $openid = implode(',',$data);
+
+//            $users = $app->user->select([$openid]);
+            $data =DB::table('class')->where('openid','ofvtlt41O6T7AjMyUiS-B0ZbJLcI')->first();
+            $user =DB::table('openid')->where('openid','ofvtlt41O6T7AjMyUiS-B0ZbJLcI')->first();
+//            foreach ($users as $v){
                 $app->template_message->send([
-                    'touser' => $v,
+                    'touser' => 'ofvtlt41O6T7AjMyUiS-B0ZbJLcI',
                     'template_id' => 'yqub99MNVhC3jt67TWxCM123GMQpqAnIRDhLiZ8kpto',
 
                     'data' => [
-                        'first' => '',
-                        'remark' => '',
+                        'first' =>$data->nickname,
+                        'remark' => '欢迎'.$user->nickname."\n".'第一节'.$data->class1."\n".'第2节'.$data->class2."\n".'第3节'.$data->class3."\n".'第4节'.$data->class4,
 
         ],
     ]);
-            }
+//            }
 
             /*
             $redis = new \Redis();
@@ -116,7 +121,7 @@ class Kernel extends ConsoleKernel
             }
 
             */
-        })->weeklyOn(1, '8:00');
+        })->everyMinute();
 
         
     }
