@@ -412,9 +412,29 @@ class SuController extends Controller
             if($xml['Event']=='subscribe'){
 //            echo $xml;
 //            dd();
+
 //                $uid= explode('_',$xml['EventKey'])[1];
+                $app = app('wechat.official_account');
+                $user = $app->user->get($xml['FromUserName']);
+                $info=DB::table('openid')->where('openid',$user['FromUserName'])->first();
+                if(empty($info)){
+
+                      DB::table('openid')->insert([
+                        'openid'=>$user['openid'],
+                        'add_time'=>time(),
+                        'subscribe'=>$user['subscribe'],
+                        'headimgurl'=>$user['headimgurl'],
+                          'sex'=>$user['sex'],
+                          'nickname'=>$user['nickname'],
+                          'city'=>$user['city'],
+                          'num'=>0,
+                    ]);
+                }
+
+
+
 //
-//
+                //二维码有参数
 //                $agent_info = DB::table('user_wechat')->where(['uid'=>$uid,'openid'=>$xml['FromUserName']])->first();
 //                if(empty($agent_info)){
 //                    DB::table('user_wechat')->insert([
@@ -423,7 +443,8 @@ class SuController extends Controller
 //                        'add_time'=>time()
 //                    ]);
 //                }
-                $message = '你好!';
+
+                $message = '你好!'.$user['nickname'];
                 $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
                 echo $xml_str;
 
@@ -1027,7 +1048,11 @@ class SuController extends Controller
     }
 
 
-
+  public function aaa(){
+      $app = app('wechat.official_account');
+      $user = $app->user->get('ofvtlt41O6T7AjMyUiS-B0ZbJLcI');
+      dd($user);
+  }
 
 
 

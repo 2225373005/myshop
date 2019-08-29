@@ -146,6 +146,7 @@ Route::get('/admin/class/', 'admin\SuController@class');
 Route::post('/admin/class_add/', 'admin\SuController@class_add');
 Route::get('/admin/class_list/', 'admin\SuController@class_list');
 Route::get('/admin/class_caidan/', 'admin\SuController@class_caidan');
+Route::get('/admin/aaa/', 'admin\SuController@aaa');
 
 
 

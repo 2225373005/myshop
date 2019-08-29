@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ce5ea7d-e8ba-403c-9741-25c5097c664d" name="默认的" comment="默认的">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/class.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/class_list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/class.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -53,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="147" column="25" selection-start-line="147" selection-start-column="25" selection-end-line="147" selection-end-column="25" />
+            <state relative-caret-position="416">
+              <caret line="148" column="49" selection-start-line="148" selection-start-column="46" selection-end-line="148" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -71,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="414" column="13" selection-start-line="414" selection-start-column="13" selection-end-line="424" selection-end-column="19" />
+            <state relative-caret-position="229">
+              <caret line="443" column="25" lean-forward="true" selection-start-line="443" selection-start-column="25" selection-end-line="443" selection-end-column="25" />
               <folding>
                 <element signature="e#46#74#0#PHP" expanded="true" />
                 <element signature="e#1965#2853#0#PHP" />
@@ -185,8 +181,8 @@
         <option value="&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/tool/You.php" />
         <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/class.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/class_list.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" />
       </list>
     </option>
@@ -297,7 +293,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="780" />
@@ -443,12 +439,12 @@
       <workItem from="1566353161516" duration="40083000" />
       <workItem from="1566779071242" duration="46990000" />
       <workItem from="1566890424660" duration="12811000" />
-      <workItem from="1567038304084" duration="3847000" />
+      <workItem from="1567038304084" duration="5442000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="303962000" />
+    <option name="totallyTimeSpent" value="305557000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -819,13 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="147" column="25" selection-start-line="147" selection-start-column="25" selection-end-line="147" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/class_list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -840,10 +829,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="148" column="49" selection-start-line="148" selection-start-column="46" selection-end-line="148" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="414" column="13" selection-start-line="414" selection-start-column="13" selection-end-line="424" selection-end-column="19" />
+        <state relative-caret-position="229">
+          <caret line="443" column="25" lean-forward="true" selection-start-line="443" selection-start-column="25" selection-end-line="443" selection-end-column="25" />
           <folding>
             <element signature="e#46#74#0#PHP" expanded="true" />
             <element signature="e#1965#2853#0#PHP" />
