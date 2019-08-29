@@ -33,19 +33,21 @@ class Kernel extends ConsoleKernel
 
         $schedule->call(function () {
             $app = app('wechat.official_account');
-            $user = DB::table('openid')->where('openid','ofvtlt41O6T7AjMyUiS')->first();
-            $data =DB::table('class')->where('openid','ofvtlt41O6T7AjMyUiS')->first();
-            \Log::info('222');
-            $app->template_message->send([
-                'touser' =>'ofvtlt41O6T7AjMyUiS-B0ZbJLcI',
-                'template_id' => 'yqub99MNVhC3jt67TWxCM123GMQpqAnIRDhLiZ8kpto',
+            $data=$app->user->list($nextOpenId = null);
+            $data=$data['data']['openid'];
+            foreach ($data as $v){
+                $app->template_message->send([
+                    'touser' => $v,
+                    'template_id' => 'yqub99MNVhC3jt67TWxCM123GMQpqAnIRDhLiZ8kpto',
 
-                'data' => [
-                    'first' => '用户',
-                    'remark' => '欢迎'.$user->nickname."\n".'第一节'.$data->class1."\n".'第2节'.$data->class2."\n".'第3节'.$data->class3."\n".'第4节'.$data->class4,
+                    'data' => [
+                        'first' => '111',
+                        'remark' => '222',
 
         ],
     ]);
+            }
+
             /*
             $redis = new \Redis();
             $redis->connect('127.0.0.1','6379');
