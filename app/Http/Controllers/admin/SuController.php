@@ -1073,12 +1073,13 @@ class SuController extends Controller
           unset($data['_token']);
           $info = DB::table('class')->where('openid',$data['openid'])->update([
               'class1'=>$data['class1'],
-              'class1'=>$data['class2'],
-              'class1'=>$data['class3'],
-              'class1'=>$data['class4'],
-              'class1'=>$data['openid'],
-              'class1'=>$data['num'],
+              'class2'=>$data['class2'],
+              'class3'=>$data['class3'],
+              'class4'=>$data['class4'],
+              'openid'=>$data['openid'],
+              'num'=>$data['num'],
           ]);
+
           if($info){
               dd('修改完成');
           }else{
