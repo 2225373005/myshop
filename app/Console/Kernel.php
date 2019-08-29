@@ -121,7 +121,7 @@ class Kernel extends ConsoleKernel
             }
 
             */
-        })->everyMinute();
+        })->weeklyOn(1, '8:00');;
 
         
     }
