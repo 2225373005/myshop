@@ -1081,6 +1081,9 @@ class SuController extends Controller
           ]);
           if($info){
               dd('修改完成');
+          }else{
+              dd('修改失败');
+
           }
         }
 //       dd($data);
