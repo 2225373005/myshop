@@ -433,7 +433,7 @@ class SuController extends Controller
 //
                 $app = app('wechat.official_account');
                 $user = $app->user->get('ofvtlt41O6T7AjMyUiS-B0ZbJLcI');
-                dd($user);
+//                dd($user);
                 $info=DB::table('openid')->where('openid',$user['openid'])->first();
 //                $lll=json_decode($info,1);
 //                dd($user);
