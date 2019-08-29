@@ -502,7 +502,7 @@ class SuController extends Controller
                         ]
 
                     ];
-                  $this->wx->post($url,json_encode($data,JSON_UNESCAPED_UNICODE));
+                  $this->wx->post($url,json_encode($xxoo,JSON_UNESCAPED_UNICODE));
 
 
 //                    $message='已选';
