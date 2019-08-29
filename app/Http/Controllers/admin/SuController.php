@@ -412,17 +412,17 @@ class SuController extends Controller
             if($xml['Event']=='subscribe'){
 //            echo $xml;
 //            dd();
-                $uid= explode('_',$xml['EventKey'])[1];
-
-
-                $agent_info = DB::table('user_wechat')->where(['uid'=>$uid,'openid'=>$xml['FromUserName']])->first();
-                if(empty($agent_info)){
-                    DB::table('user_wechat')->insert([
-                        'uid'=>$uid,
-                        'openid'=>$xml['FromUserName'],
-                        'add_time'=>time()
-                    ]);
-                }
+//                $uid= explode('_',$xml['EventKey'])[1];
+//
+//
+//                $agent_info = DB::table('user_wechat')->where(['uid'=>$uid,'openid'=>$xml['FromUserName']])->first();
+//                if(empty($agent_info)){
+//                    DB::table('user_wechat')->insert([
+//                        'uid'=>$uid,
+//                        'openid'=>$xml['FromUserName'],
+//                        'add_time'=>time()
+//                    ]);
+//                }
                 $message = '你好!';
                 $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
                 echo $xml_str;
@@ -551,10 +551,11 @@ class SuController extends Controller
 
 
 
-//            $message = '欢迎使用本公司提供的油价查询功能!';
-//            $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
-//            echo $xml_str;
+            $message = '你好!';
+            $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
+            echo $xml_str;
         }
+
 //        \Log::Info(json_encode($xml));
 
     }
@@ -959,6 +960,80 @@ class SuController extends Controller
 
 */
     }
+
+
+    public function pppp(){
+        $str='ccdsasdas';
+        $num = strlen($str);
+        $d="";
+        $c=0;
+        for($i=0;$i<=$num-1;$i++){
+            $a=substr($str,$i,1);
+            $b=substr($str,$i+1,1);
+
+           if($a==$b){
+            $c+=1;
+           }
+
+           if($a!=$b){
+              if($c!=0){
+                  $d.=$c.$a;
+              }else{
+                  $d.=$a;
+              }
+             $c=0;
+           }
+        }
+        dd($d);
+    }
+
+
+    public function class(){
+       return view('admin/class');
+    }
+    public function class_add(){
+        $data=$this->request->all();
+        unset($data['_token']);
+        $info=DB::table('class')->insert($data);
+        if($info){
+            return redirect('admin/class_list');
+        }
+    }
+    public  function class_list(){
+        return view('/admin/class_list');
+    }
+
+    public function class_caidan(){
+        $url='https://api.weixin.qq.com/cgi-bin/menu/create?access_token='.$this->wx->access_token().'';
+//        dd($url);
+        $data=[
+            "button"=>[
+                 [
+                     "type"=>"click",
+                      "name"=>"查看课程",
+                      "key"=>"kecheng",
+                  ],
+                [
+                    "type"=>"view",
+                    "name"=>"查看课程",
+                    "url"=>env('APP_URL').'/admin/accesss_token',
+                ],
+        ],
+    ];
+//        dd($data);
+        $data=$this->wx->post($url,json_encode($data,JSON_UNESCAPED_UNICODE));
+        dd($data);
+
+    }
+
+
+
+
+
+
+
+
+
 
 
 

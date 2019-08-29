@@ -139,6 +139,20 @@ Route::get('/admin/access_token/', 'admin\SuController@access_token');
 //微信油价
 Route::get('/admin/you_index/', 'admin\SuController@you_index');
 
+Route::get('/admin/pppp/', 'admin\SuController@pppp');
+
+
+Route::get('/admin/class/', 'admin\SuController@class');
+Route::post('/admin/class_add/', 'admin\SuController@class_add');
+Route::get('/admin/class_list/', 'admin\SuController@class_list');
+Route::get('/admin/class_caidan/', 'admin\SuController@class_caidan');
+
+
+
+
+
+
+
 Route::get('/tool/index/', 'tool\You@index');
 
 

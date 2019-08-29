@@ -54,7 +54,7 @@ class Kernel extends ConsoleKernel
                     $ppp=0;
                     foreach ($v as $k=>$vv){
                         if($vv != $info[$k]){
-                            $ppp=1;
+                                                      $ppp=1;
 
                         }
                     }
