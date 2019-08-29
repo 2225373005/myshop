@@ -786,7 +786,9 @@ class SuController extends Controller
      return view('admin/biao_wode');
     }
     public function access_token(){
-        $url_do=asset('admin/biao_token');
+//        $url_do=asset('admin/biao_token');
+        $url_do=asset('admin/class_list');
+
         $url='https://open.weixin.qq.com/connect/oauth2/authorize?appid='.env('APPID').'&redirect_uri='.$url_do.'&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect';
         header('location:'.$url);
     }
@@ -1039,6 +1041,8 @@ class SuController extends Controller
         }
     }
     public  function class_list(){
+        $data = $this->request->all();
+        dd($data);
         return view('/admin/class_list');
     }
 
