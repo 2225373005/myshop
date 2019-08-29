@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5ce5ea7d-e8ba-403c-9741-25c5097c664d" name="默认的" comment="默认的">
       <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="494" column="141" lean-forward="true" selection-start-line="493" selection-start-column="16" selection-end-line="494" selection-end-column="141" />
+            <state relative-caret-position="109">
+              <caret line="484" column="89" selection-start-line="484" selection-start-column="15" selection-end-line="484" selection-end-column="89" />
               <folding>
                 <element signature="e#46#74#0#PHP" expanded="true" />
                 <element signature="e#1965#2853#0#PHP" />
@@ -86,8 +85,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="35" column="76" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
+            <state relative-caret-position="115">
+              <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
               <folding>
                 <element signature="e#31#74#0#PHP" expanded="true" />
               </folding>
@@ -496,18 +495,18 @@
       <workItem from="1566353161516" duration="40083000" />
       <workItem from="1566779071242" duration="46990000" />
       <workItem from="1566890424660" duration="12811000" />
-      <workItem from="1567038304084" duration="24111000" />
+      <workItem from="1567038304084" duration="24414000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="324226000" />
+    <option name="totallyTimeSpent" value="324529000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.22541603" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.22541603" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
       <window_info id="Favorites" order="2" sideWeight="0.5008183" side_tool="true" weight="0.20726173" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -520,7 +519,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3225256" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3225256" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32786885" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -843,13 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/wxx/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1196">
-          <caret line="52" column="17" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/class_list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -874,10 +866,24 @@
     <entry file="file://$PROJECT_DIR$/storage/framework/cache/data/1e/e1/1ee15845115e30bec9087e7459841adbaee220c6">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/class.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/wxx/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1196">
+          <caret line="52" column="17" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="494" column="141" lean-forward="true" selection-start-line="493" selection-start-column="16" selection-end-line="494" selection-end-column="141" />
+        <state relative-caret-position="109">
+          <caret line="484" column="89" selection-start-line="484" selection-start-column="15" selection-end-line="484" selection-end-column="89" />
           <folding>
             <element signature="e#46#74#0#PHP" expanded="true" />
             <element signature="e#1965#2853#0#PHP" />
@@ -901,17 +907,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/class.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="6" column="46" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="35" column="76" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
+        <state relative-caret-position="115">
+          <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
           <folding>
             <element signature="e#31#74#0#PHP" expanded="true" />
           </folding>

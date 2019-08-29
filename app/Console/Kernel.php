@@ -34,6 +34,8 @@ class Kernel extends ConsoleKernel
         $schedule->call(function () {
             $app = app('wechat.official_account');
             $user = DB::table('openid')->where('openid','ofvtlt41O6T7AjMyUiS')->first();
+            $data =DB::table('class')->where('openid','ofvtlt41O6T7AjMyUiS')->first();
+            \Log::info('222');
             $app->template_message->send([
                 'touser' =>'ofvtlt41O6T7AjMyUiS-B0ZbJLcI',
                 'template_id' => 'yqub99MNVhC3jt67TWxCM123GMQpqAnIRDhLiZ8kpto',
