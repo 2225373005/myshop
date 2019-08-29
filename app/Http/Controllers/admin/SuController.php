@@ -486,24 +486,10 @@ class SuController extends Controller
                     $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
                     echo $xml_str;
                 }else{
-                    $url='https://api.weixin.qq.com/cgi-bin/message/template/send?access_token='.$this->access_token().'';
-                    $xxoo=[
-                        "touser"=>$this->request->session()->get('openid'),
-                        "template_id"=>"yqub99MNVhC3jt67TWxCM123GMQpqAnIRDhLiZ8kpto",
-                        'data'=>[
-                            "first"=> [
-                                    "value"=>"欢迎你登录",
-                                   "color"=>"#173177"
-                               ],
-                            "remark"=> [
-                                "value"=>'第一节'.$data['class1']."\n".'第2节'.$data['class2']."\n".'第3节'.$data['class3']."\n".'第4节'.$data['class4'],
-                                "color"=>"#173177"
-                            ],
-                        ]
 
-                    ];
-                  $this->wx->post($url,json_encode($xxoo,JSON_UNESCAPED_UNICODE));
-
+  $message= '第一节'.$data['class1']."\n".'第2节'.$data['class2']."\n".'第3节'.$data['class3']."\n".'第4节'.$data['class4'];
+                    $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
+                    echo $xml_str;
 
 //                    $message='已选';
 //                    $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
