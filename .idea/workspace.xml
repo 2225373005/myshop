@@ -74,8 +74,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="483" column="47" selection-start-line="483" selection-start-column="47" selection-end-line="483" selection-end-column="47" />
+            <state relative-caret-position="270">
+              <caret line="492" column="106" selection-start-line="492" selection-start-column="106" selection-end-line="492" selection-end-column="106" />
               <folding>
                 <element signature="e#46#74#0#PHP" expanded="true" />
                 <element signature="e#1965#2853#0#PHP" />
@@ -96,6 +96,15 @@
                 <element signature="e#8877#9430#0#PHP" />
                 <element signature="e#9449#9601#0#PHP" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;3ef2d3fb-f248-4818-9ac0-0a1bc1b09760&gt;/app/Http/Controllers/admin/SuController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="483" column="15" lean-forward="true" selection-start-line="483" selection-start-column="15" selection-end-line="483" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -140,8 +149,8 @@
       <find>accesss_token</find>
       <find>access_token</find>
       <find>zid</find>
-      <find>zidong</find>
       <find>zi</find>
+      <find>zidong</find>
     </findStrings>
     <dirStrings>
       <dir>C:\wnmp\www\myshop\resources\views\admin</dir>
@@ -459,12 +468,12 @@
       <workItem from="1566353161516" duration="40083000" />
       <workItem from="1566779071242" duration="46990000" />
       <workItem from="1566890424660" duration="12811000" />
-      <workItem from="1567038304084" duration="17404000" />
+      <workItem from="1567038304084" duration="18066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="317519000" />
+    <option name="totallyTimeSpent" value="318181000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -858,8 +867,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/admin/SuController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="483" column="47" selection-start-line="483" selection-start-column="47" selection-end-line="483" selection-end-column="47" />
+        <state relative-caret-position="270">
+          <caret line="492" column="106" selection-start-line="492" selection-start-column="106" selection-end-line="492" selection-end-column="106" />
           <folding>
             <element signature="e#46#74#0#PHP" expanded="true" />
             <element signature="e#1965#2853#0#PHP" />

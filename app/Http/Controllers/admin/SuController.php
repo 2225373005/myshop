@@ -481,14 +481,16 @@ class SuController extends Controller
                     echo $xml_str;
                 }elseif($xml['EventKey']=='kecheng'){
                 $data =DB::table('class')->where('openid',$xml['FromUserName'])->first();
-                    $data=json_decode($data,1);
+//                $data=json_decode($data,1);
+//                $data=json_decode($data,1);
+//                    dd($data->class1);
                 if(empty($data)){
                     $message='没有选修课程,请选修课程';
                     $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
                     echo $xml_str;
                 }else{
 
-  $message= '第一节'.$data['class1']."\n".'第2节'.$data['class2']."\n".'第3节'.$data['class3']."\n".'第4节'.$data['class4'];
+  $message= '第一节'.$data->class1."\n".'第2节'.$data->class2."\n".'第3节'.$data->class3."\n".'第4节'.$data->class4;
                     $xml_str = '<xml><ToUserName><![CDATA['.$xml['FromUserName'].']]></ToUserName><FromUserName><![CDATA['.$xml['ToUserName'].']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['.$message.']]></Content></xml>';
                     echo $xml_str;
 
