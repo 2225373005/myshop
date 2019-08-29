@@ -41,8 +41,8 @@ class Kernel extends ConsoleKernel
                     'template_id' => 'yqub99MNVhC3jt67TWxCM123GMQpqAnIRDhLiZ8kpto',
 
                     'data' => [
-                        'first' => '111',
-                        'remark' => '222',
+                        'first' => '',
+                        'remark' => '',
 
         ],
     ]);
@@ -116,7 +116,7 @@ class Kernel extends ConsoleKernel
             }
 
             */
-        })->everyMinute();
+        })->weeklyOn(1, '8:00');
 
         
     }
