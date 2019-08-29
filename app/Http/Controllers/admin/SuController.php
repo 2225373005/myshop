@@ -1067,7 +1067,7 @@ class SuController extends Controller
         $data['num']+=1;
 //        $time =mktime('2019-09-01');
 
-        if($data['num']>=3 ){
+        if($data['num']>3 ){
             dd('不能修改');
         }else{
           unset($data['_token']);
