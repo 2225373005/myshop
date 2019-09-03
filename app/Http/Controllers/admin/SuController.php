@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\tool\Su;
 use App\Http\Controllers\tool\Wx;
+use App\Http\Controllers\tool\You;
 use Illuminate\Support\Facades\Storage;
 use GuzzleHttp\Client;
 use DB;
@@ -16,13 +17,14 @@ class SuController extends Controller
     public $client;
     public $wx;
     public $su;
-    public function __construct(Request $request,Su $su,Wx $wx,Client $client)
+    public $you;
+    public function __construct(Request $request,Su $su,Wx $wx,Client $client,You $you)
     {
         $this->request=$request;
         $this->su=$su;
         $this->wx=$wx;
         $this->client=$client;
-
+        $this->you=$you;
     }
     public function sucai(){
 
@@ -1162,7 +1164,14 @@ class SuController extends Controller
       }
   }
 
+  public function kkkk(){
+        $url='http://www.wantwo.cn/tool/index';
+//      $params=array();
+//    $result=do_get($url,$params);
+      $data = $this->you->do_get($url);
 
+        dd($data);
+  }
 
 
 

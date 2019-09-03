@@ -149,6 +149,7 @@ Route::get('/admin/class_caidan/', 'admin\SuController@class_caidan');
 
 Route::get('/admin/class_updete/', 'admin\SuController@class_updete');
 Route::post('/admin/class_update_do/', 'admin\SuController@class_update_do');
+Route::get('/admin/kkkk/', 'admin\SuController@kkkk');
 
 
 Route::get('/admin/aaa/', 'admin\SuController@aaa');
@@ -160,6 +161,7 @@ Route::get('/admin/aaa/', 'admin\SuController@aaa');
 
 
 Route::get('/tool/index/', 'tool\You@index');
+Route::get('/tool/do_get/', 'tool\You@do_get');
 
 
 
@@ -315,6 +317,18 @@ Route::get('xxxx/list','xxxx\xxoo@list');
 Route::get('xxxx/list_do','xxxx\xxoo@list_do');
 Route::get('xxxx/xiao','xxxx\xxoo@xiao');
 Route::post('xxxx/xiao_do','xxxx\xxoo@xiao_do');
+
+//登录
+Route::get('aaa/log','aaa\index@log');
+Route::post('aaa/log_do','aaa\index@log_do');
+
+Route::get('aaa/list','aaa\index@list');
+
+Route::get('aaa/sign','aaa\index@sign');
+Route::get('aaa/sign_do','aaa\index@sign_do');
+
+
+Route::get('jie/jiekou','jie\JieController@jie');
 
 
 
