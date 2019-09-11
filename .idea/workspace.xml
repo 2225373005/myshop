@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ce5ea7d-e8ba-403c-9741-25c5097c664d" name="默认的" comment="默认的">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="83" column="27" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
+            <state relative-caret-position="60">
+              <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -435,18 +433,18 @@
       <workItem from="1567817625366" duration="8433000" />
       <workItem from="1567989174636" duration="22883000" />
       <workItem from="1568075150490" duration="27128000" />
-      <workItem from="1568162848179" duration="4762000" />
+      <workItem from="1568162848179" duration="4944000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="426160000" />
+    <option name="totallyTimeSpent" value="426342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.23298033" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.23298033" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24962178" />
       <window_info id="Favorites" order="2" sideWeight="0.5008183" side_tool="true" weight="0.20726173" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -459,7 +457,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3208191" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3208191" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32764506" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="12" weight="0.32935154" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -853,8 +851,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="83" column="27" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
+        <state relative-caret-position="60">
+          <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
         </state>
       </provider>
     </entry>

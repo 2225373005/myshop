@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    孙志国是我儿子
+                    儿子你来了
                 </div>
 
                 <div class="links">
