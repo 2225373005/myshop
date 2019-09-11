@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    儿子你来了
+                    来了老弟
                 </div>
 
                 <div class="links">
