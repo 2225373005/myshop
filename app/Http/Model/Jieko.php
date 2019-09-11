@@ -17,4 +17,5 @@ class Jieko extends Model
 //        dd($flights);
         return $flights;
     }
+
 }

@@ -11,9 +11,38 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/jie/jie', function () {
+    return view('jie.jie_add');
 });
+Route::get('/jie/list', function () {
+    return view('jie.jie_list');
+});
+Route::get('/jie/update', function () {
+    return view('jie.jie_update');
+});
+//周考
+Route::get('/zhou/index', function () {
+    return view('zhou.index');
+});
+Route::get('/zhou/list', function () {
+    return view('zhou.list');
+});
+Route::get('/zhou/update', function () {
+    return view('zhou.update');
+});
+//接口
+//Route::get('jie/jie_add', 'jie\JieController@jie_add');
+//Route::get('jie/jie_list', 'jie\JieController@jie_list');
+//Route::get('jie/jie_delete', 'jie\JieController@jie_delete');
+//Route::get('jie/jie_update', 'jie\JieController@jie_update');
+//Route::get('jie/jie_update_do', 'jie\JieController@jie_update_do');
+
+
+//restful  资源控制器
+Route::resource('api/restful', 'api\PostController');
+
+Route::resource('api/zhou', 'api\RestController');
+
 
 
 Route::group(['middleware' => ['login']], function () {
@@ -306,8 +335,8 @@ Route::get('wxx/template','wxx\IndexController@template');
 Route::get('wxx/message','wxx\IndexController@message');
 
 ////我的表白
-//Route::get('xxoo/index','admin\BiaoController@index');
-//Route::post('xxoo/add','admin\BiaoController@add');
+Route::get('xxoo/index','admin\BiaoController@index');
+Route::post('xxoo/add','admin\BiaoController@add');
 
 //周考
 Route::get('xxxx/login','xxxx\xxoo@login');
@@ -331,8 +360,10 @@ Route::get('aaa/sign_do','aaa\index@sign_do');
 Route::get('jie/jiekou','jie\JieController@jie');
 
 
-
-
+Route::get('/abb/index/', 'abb\Index@index');
+Route::get('/abb/zidong/', 'abb\Index@zidong');
+//自己写的接口
+Route::get('/api/index/', 'api\ZiController@index');
 
 
 

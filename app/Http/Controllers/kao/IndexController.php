@@ -9,7 +9,17 @@ class IndexController extends Controller
 {
 	 public  $ppp;
     public function logs(){
-    	return view('kao/logs');
+        // dd(11);
+        $name='zhang';
+      // for ($i=0; $i <10000; $i++) { 
+         $data=md5('1901'.$name.'1');
+         // dd($da)
+        // dd($data);
+         $info=file_get_contents('http://wym.yingge.fun/api/test/addUser?name=zhang&age=1&sign='.$data);
+      // }
+      dd($info);
+
+    	// return view('kao/logs');
     }
     public function logs_do(Request $request){
          $name = $request->name;
@@ -107,31 +117,32 @@ class IndexController extends Controller
       return view('kao/ccc');
     }
 
-    public function ccc_do(Request $request){
-    	$d_id = $request->d_id;
+    public function ccc_do(Request $request)
+    {
+        $d_id = $request->d_id;
         $info = $request->all();
         // dd($info);
         unset($info['_token']);
         // DB::beginTransaction();
         DB::connection('mysql')->beginTransaction();
         $data = true;
-        if($d_id==1){
-          $data = DB::table('question_problem')->insertGetId([
-              'type_id'=>$d_id,
-              'problem'=>$info['c_info'],
-              'add_time'=>time(),
-        	]);
-          $data1 = DB::table('question_answer')->insert([
-          	]);
-        
-        $data = 
-        }elseif($d_id==2){
+        if ($d_id == 1) {
+            $data = DB::table('question_problem')->insertGetId([
+                'type_id' => $d_id,
+                'problem' => $info['c_info'],
+                'add_time' => time(),
+            ]);
+//          $data1 = DB::table('question_answer')->insert([
+//          	]);
+//
+//
+//        }elseif($d_id==2){
+//
+//
+//
+//        }
 
-        }else{
 
         }
-
-        
-        
     }
 }
