@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    孙志国是我儿子
                 </div>
 
                 <div class="links">

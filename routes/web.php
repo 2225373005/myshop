@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Route::get('/jie/jie', function () {
     return view('jie.jie_add');
 });
