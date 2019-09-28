@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5ce5ea7d-e8ba-403c-9741-25c5097c664d" name="默认的" comment="默认的">
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/kao/KooController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/kao/KooController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/aaaa/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aaaa/index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/kao/KooController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="97" column="45" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
+            <state relative-caret-position="203">
+              <caret line="97" column="24" lean-forward="true" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
               <folding>
                 <element signature="e#44#72#0#PHP" expanded="true" />
               </folding>
@@ -51,7 +50,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/tool/Wx.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="-150">
               <caret line="35" column="36" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="36" />
             </state>
           </provider>
@@ -461,12 +460,12 @@
       <workItem from="1568641535873" duration="3063000" />
       <workItem from="1568678932038" duration="91946000" />
       <workItem from="1569036076145" duration="1309000" />
-      <workItem from="1569199174878" duration="78987000" />
+      <workItem from="1569199174878" duration="79183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="650256000" />
+    <option name="totallyTimeSpent" value="650452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1378" height="733" extended-state="0" />
@@ -485,7 +484,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32764506" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="12" weight="0.32935154" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -873,15 +872,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/tool/Wx.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="-150">
           <caret line="35" column="36" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/kao/KooController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="97" column="45" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
+        <state relative-caret-position="203">
+          <caret line="97" column="24" lean-forward="true" selection-start-line="97" selection-start-column="24" selection-end-line="97" selection-end-column="24" />
           <folding>
             <element signature="e#44#72#0#PHP" expanded="true" />
           </folding>
