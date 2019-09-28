@@ -61,7 +61,7 @@ return [
         'default' => [
             'app_id' => env('APPID', 'your-app-id'),         // AppID
             'secret' => env('APPSECRET', 'your-app-secret'),    // AppSecret
-            'token' => env('WECHAT_OFFICIAL_ACCOUNT_TOKEN', 'your-token'),           // Token
+            'token' => env('WECHAT_OFFICIAL_ACCOUNT_TOKEN', 'your-token'),           // Atoken
             'aes_key' => env('WECHAT_OFFICIAL_ACCOUNT_AES_KEY', ''),                 // EncodingAESKey
 
             /*

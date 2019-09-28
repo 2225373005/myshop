@@ -242,9 +242,18 @@ Route::group(['middleware' => ['kao']], function () {
    Route::post('/kao/index','kao\IndexController@index');
 
 
-
 });
 
+//菜谱
+Route::get('xxoo/xxoo','kao\KaoController@index');
+Route::get('xxoo/xxoo/list','kao\KaoController@list');
+
+
+Route::get('aaaa/index','kao\KooController@index');
+Route::get('aaaa/login','kao\KooController@login');
+Route::get('aaaa/login_do','kao\KooController@login_do');
+Route::get('aaaa/ding','kao\KooController@ding');
+Route::get('aaaa/zhao','kao\KooController@zhao');
 
 //周考2
 //登录
@@ -369,6 +378,86 @@ Route::get('/abb/zidong/', 'abb\Index@zidong');
 //自己写的接口
 Route::get('/api/index/', 'api\ZiController@index');
 
+
+//acc 商城
+
+Route::get('/acc/login/', 'acc\MyshopController@login');
+Route::post('/acc/login_do/', 'acc\MyshopController@login_do');
+
+Route::group(['middleware' => ['shoplogin']], function () {
+    Route::get('/acc/index/', 'acc\MyshopController@index');
+    Route::post('/acc/category_add', 'acc\MyshopController@category_add');
+    Route::post('/acc/yan', 'acc\MyshopController@yan');
+//商品
+    Route::get('/acc/shop', 'acc\MyshopController@shop');
+    Route::get('/acc/shop_select', 'acc\MyshopController@shop_select');
+    Route::post('/acc/shop_add', 'acc\MyshopController@shop_add');
+
+
+    Route::get('/acc/shu', 'acc\MyshopController@shu');
+    Route::get('/acc/shu_list', 'acc\MyshopController@shu_list');
+    Route::get('/acc/shu_add', 'acc\MyshopController@shu_add');
+    Route::post('/acc/shu_add_do', 'acc\MyshopController@shu_add_do');
+    Route::post('/acc/shu_delete', 'acc\MyshopController@shu_delete');
+
+    Route::get('/acc/select', 'acc\MyshopController@select');
+
+
+    Route::get('/acc/type', 'acc\MyshopController@type');
+    Route::post('/acc/type_add', 'acc\MyshopController@type_add');
+
+//货品页
+    Route::get('/acc/huo/{info}', 'acc\MyshopController@huo');
+    Route::post('/acc/huo_add', 'acc\MyshopController@huo_add');
+    Route::get('/acc/huo_list', 'acc\MyshopController@huo_list');
+    Route::post('/acc/huo_dian', 'acc\MyshopController@huo_dian');
+});
+
+//Route::get('/acc/index/', 'acc\MyshopController@index');
+
+
+
+
+
+
+//前台商品
+//Route::get('/api/index', 'api\ShopController@index');
+
+//Route::group(['middleware' => ['hapi','token']], function () {
+//    Route::get('/api/index', 'api\ShopController@index');
+//    Route::get('/api/xxoo', 'api\ShopController@xxoo');
+//    Route::get('/api/shop_category', 'api\ShopController@shop_category');
+//    Route::get('/api/shop_goods_list', 'api\ShopController@shop_goods_list');
+//});
+
+Route::group(['middleware' => ['hapi']], function () {
+    Route::group(['middleware' => ['atoken']], function () {
+        Route::any('/api/shop_gou', 'api\ShopController@shop_gou');
+
+    });
+    Route::any('/api/shop_gou_list', 'api\ShopController@shop_gou_list');
+    Route::any('/api/login', 'api\ShopController@login');
+
+//    登录
+        Route::get('/api/index', 'api\ShopController@index');
+        Route::get('/api/xxoo', 'api\ShopController@xxoo');
+        Route::get('/api/shop_category', 'api\ShopController@shop_category');
+        Route::get('/api/shop_goods_list', 'api\ShopController@shop_goods_list');
+
+});
+
+
+
+
+Route::get('/kao/zhou_login', 'kao\ZhouController@login');
+Route::get('/kao/cha', 'kao\ZhouController@cha');
+
+Route::get('/kao/zhou_login_do', function () {
+    return view('kao.zhou_login_do');
+});
+Route::get('/kao/zhou_cha_do', function () {
+    return view('kao.zhou_cha_do');
+});
 
 
 

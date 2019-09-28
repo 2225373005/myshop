@@ -66,7 +66,10 @@ class Kernel extends HttpKernel
         'kao' => \App\Http\Middleware\Kao::class,
         'ting' => \App\Http\Middleware\Ting::class,
         'koo' => \App\Http\Middleware\Koo::class,
-
+        'api' => \App\Http\Middleware\Api::class,
+        'hapi' => \App\Http\Middleware\Hapi::class,
+        'shoplogin' => \App\Http\Middleware\Shoplogin::class,
+        'atoken' => \App\Http\Middleware\Atoken::class,
     ];
 
     /**

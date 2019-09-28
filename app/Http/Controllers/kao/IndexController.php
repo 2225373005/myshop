@@ -36,6 +36,7 @@ class IndexController extends Controller
          }
     }
 
+
     public function add(Request $request){
     	// $request->session()->forget('name');
     	 $value = $request->session()->get('name');

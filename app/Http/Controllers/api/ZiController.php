@@ -9,8 +9,8 @@ class ZiController extends Controller
 {
    public function index(Request $request)
    {
-      echo phpinfo();
-       dd();
+//      echo phpinfo();
+//       dd();
         $data='bf5a01f6fd15433fa3f9022f37207cccd044f145c18c94471c7edb7f7bc4a66405529edf845ea39a39ed8572ff18db24';
 
 //        $data = $request->authstr;
