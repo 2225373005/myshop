@@ -95,7 +95,7 @@ class KooController extends Controller
                 $xxoo[$v]=$data['can'][$k];
             }
 //            dd($xxoo);
-            $data=Wx::post($data['url'],json_encode($xxoo));
+            $data=Wx::post($data['url'],json_encode($xxoo,JSON_UNESCAPED_UNICODE));
         }
 
 
