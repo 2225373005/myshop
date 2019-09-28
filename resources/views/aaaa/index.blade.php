@@ -39,7 +39,7 @@
 </form>
     <div>
         返回结果:
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea name=""  cols="30" rows="10" id="kkkk"></textarea>
     </div>
 
 
@@ -55,6 +55,19 @@
        var kk= $('#llll').clone();
         $('#xxoo').append(kk);
     });
+
+   var can= getQueryStringByName('can');
+   // alert(can);
+   $('#kkkk').html(can);
+
+    function getQueryStringByName(name){
+        var result = location.search.match(new RegExp("[\?\&]" + name+ "=([^\&]+)","i"));
+        if(result == null || result.length < 1){
+            return "";
+        }
+        return result[1];
+    }
+
     // $('#submit').on('click',function () {
     //     // alert(22);
     //     var method_do='';

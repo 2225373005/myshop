@@ -86,6 +86,7 @@ class KooController extends Controller
             $aaa=trim($aaa,'"');
 //            dd($data['url'].'?'.$aaa);
             $url=$data['url'].'?'.$aaa;
+
             $data = file_get_contents($url);
         }else{
             $xxoo=[];
@@ -94,12 +95,12 @@ class KooController extends Controller
                 $xxoo[$v]=$data['can'][$k];
             }
 //            dd($xxoo);
-            $data=Wx::post($data['url'],$data);
+            $data=Wx::post($data['url'],$xxoo);
         }
 
 
 //   dd($aaa);
-
+            return redirect('aaaa/index?can='.$data);
 //        return view('aaaa/zhao',['data']);
 
     }
