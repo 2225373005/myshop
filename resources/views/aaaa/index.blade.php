@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<form action="{{url('aaaa/index')}}" method='get'>
+<form action="{{url('aaaa/zhao')}}" method='get'>
     <table>
         <tr>
             <td>请求地址:</td>

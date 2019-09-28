@@ -8,38 +8,7 @@ use DB;
 use App\Http\Controllers\tool\Wx;
 class KooController extends Controller
 {
-    public function index(Request $request){
-        if($request->all()){
-        $data =$request->all();
-        $aaa='';
-//        dd($data);
-        foreach ($data['names'] as $k=>$v){
-            $aaa.=$v.'='.$data['can'][$k].'&';
-        }
-
-        if($data['xxoo']=='get'){
-
-            $aaa=trim($aaa,'&');
-            $aaa=trim($aaa,'"');
-//            dd($data['url'].'?'.$aaa);
-            $url=$data['url'].'?'.$aaa;
-            $data = file_get_contents($url);
-        }else{
-            $xxoo=[];
-            foreach ($data['names'] as $k=>$v){
-//                dump($v);
-                $xxoo[$v]=$data['can'][$k];
-            }
-//            dd($xxoo);
-            $data=Wx::post($data['url'],$data);
-        }
-            return view('aaaa/zhao',['data'=>$data]);
-        }
-
-//   dd($aaa);
-
-
-
+    public function index(){
         return view('aaaa/index');
     }
 
@@ -131,7 +100,7 @@ class KooController extends Controller
 
 //   dd($aaa);
 
-        return view('aaaa/zhao',['data'=>$data]);
+//        return view('aaaa/zhao',['data']);
 
     }
 
