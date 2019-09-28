@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ce5ea7d-e8ba-403c-9741-25c5097c664d" name="默认的" comment="默认的">
-      <change afterPath="$PROJECT_DIR$/resources/views/aaaa/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/acc/common.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/acc/huo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/acc/huo_list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/acc/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/acc/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/acc/shop.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/acc/shu.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/acc/shu_add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/acc/shu_list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/acc/type.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/kao/zhou_cha_do.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/kao/zhou_login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/kao/zhou_login_do.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/api/ZiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/api/ZiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/kao/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/kao/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/tool/Rsa.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/tool/Rsa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/wechat.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/wechat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/kao/KooController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/kao/KooController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/aaaa/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/aaaa/index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/kao/KooController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="87" column="39" lean-forward="true" selection-start-line="87" selection-start-column="39" selection-end-line="87" selection-end-column="39" />
+            <state relative-caret-position="330">
+              <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
               <folding>
                 <element signature="e#44#72#0#PHP" expanded="true" />
               </folding>
@@ -123,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/aaaa/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+            <state relative-caret-position="270">
+              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -536,12 +516,12 @@
       <workItem from="1568641535873" duration="3063000" />
       <workItem from="1568678932038" duration="91946000" />
       <workItem from="1569036076145" duration="1309000" />
-      <workItem from="1569199174878" duration="76398000" />
+      <workItem from="1569199174878" duration="77268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="647667000" />
+    <option name="totallyTimeSpent" value="648537000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1378" height="733" extended-state="0" />
@@ -932,13 +912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/aaaa/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/zhou/list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -955,11 +928,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/kao/KooController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="87" column="39" lean-forward="true" selection-start-line="87" selection-start-column="39" selection-end-line="87" selection-end-column="39" />
+        <state relative-caret-position="330">
+          <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
           <folding>
             <element signature="e#44#72#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/aaaa/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
